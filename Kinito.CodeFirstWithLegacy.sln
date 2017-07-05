@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNorthwind", "ConsoleNorthwind\ConsoleNorthwind.csproj", "{4DF11B18-E316-43DD-8249-775A19858C94}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6A6CAF66-FC5E-4E55-A34C-A83F04631F7B}"
+	ProjectSection(SolutionItems) = preProject
+		Northwind.bak = Northwind.bak
+		Northwind.bak.zip = Northwind.bak.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
