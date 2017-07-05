@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNorthwind", "Console
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6A6CAF66-FC5E-4E55-A34C-A83F04631F7B}"
 	ProjectSection(SolutionItems) = preProject
-		Northwind.bak = Northwind.bak
 		Northwind.bak.zip = Northwind.bak.zip
 	EndProjectSection
 EndProject
