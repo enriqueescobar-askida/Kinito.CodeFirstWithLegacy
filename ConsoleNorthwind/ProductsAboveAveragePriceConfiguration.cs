@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,9 +28,7 @@ namespace ConsoleNorthwind
         public ProductsAboveAveragePriceConfiguration(string schema)
         {
             ToTable("Products Above Average Price", schema);
-            HasKey(x => x.ProductName);
-
-            Property(x => x.ProductName).HasColumnName(@"ProductName").HasColumnType("nvarchar").IsRequired().HasMaxLength(40).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").IsOptional().HasPrecision(19,4);
         }
     }

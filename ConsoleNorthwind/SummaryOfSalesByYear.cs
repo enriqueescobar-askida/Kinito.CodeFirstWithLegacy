@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,8 +20,16 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class SummaryOfSalesByYear
     {
+        [Display(Name = "Shipped date")]
         public System.DateTime? ShippedDate { get; set; } // ShippedDate
+
+        [Column(@"OrderID", Order = 2, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Order ID")]
         public int OrderId { get; set; } // OrderID (Primary key)
+
+        [Display(Name = "Subtotal")]
         public decimal? Subtotal { get; set; } // Subtotal
     }
 

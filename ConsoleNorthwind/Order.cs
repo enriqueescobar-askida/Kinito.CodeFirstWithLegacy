@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,19 +20,63 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Order
     {
+        [Column(@"OrderID", Order = 1, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Order ID")]
         public int OrderId { get; set; } // OrderID (Primary key)
+
+        [MaxLength(5)]
+        [StringLength(5)]
+        [Display(Name = "Customer ID")]
         public string CustomerId { get; set; } // CustomerID (length: 5)
+
+        [Display(Name = "Employee ID")]
         public int? EmployeeId { get; set; } // EmployeeID
+
+        [Display(Name = "Order date")]
         public System.DateTime? OrderDate { get; set; } // OrderDate
+
+        [Display(Name = "Required date")]
         public System.DateTime? RequiredDate { get; set; } // RequiredDate
+
+        [Display(Name = "Shipped date")]
         public System.DateTime? ShippedDate { get; set; } // ShippedDate
+
+        [Display(Name = "Ship via")]
         public int? ShipVia { get; set; } // ShipVia
+
+        [Display(Name = "Freight")]
         public decimal? Freight { get; set; } // Freight
+
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Display(Name = "Ship name")]
         public string ShipName { get; set; } // ShipName (length: 40)
+
+        [MaxLength(60)]
+        [StringLength(60)]
+        [Display(Name = "Ship address")]
         public string ShipAddress { get; set; } // ShipAddress (length: 60)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship city")]
         public string ShipCity { get; set; } // ShipCity (length: 15)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship region")]
         public string ShipRegion { get; set; } // ShipRegion (length: 15)
+
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Display(Name = "Ship postal code")]
         public string ShipPostalCode { get; set; } // ShipPostalCode (length: 10)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship country")]
         public string ShipCountry { get; set; } // ShipCountry (length: 15)
 
         // Reverse navigation

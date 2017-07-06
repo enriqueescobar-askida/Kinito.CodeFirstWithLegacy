@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,10 +28,8 @@ namespace ConsoleNorthwind
         public RegionConfiguration(string schema)
         {
             ToTable("Region", schema);
-            HasKey(x => x.RegionId);
-
-            Property(x => x.RegionId).HasColumnName(@"RegionID").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.RegionDescription).HasColumnName(@"RegionDescription").HasColumnType("nchar").IsRequired().IsFixedLength().HasMaxLength(50);
+            Property(x => x.RegionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.RegionDescription).HasColumnName(@"RegionDescription").HasColumnType("nchar").IsFixedLength();
         }
     }
 

@@ -9,7 +9,7 @@
             using (var db = new NorthwindDbContext())
             {
                 var data = db.Categories;
-                /*foreach (var item in data)
+                foreach (var item in data)
                 {
                     Console.WriteLine(item.CategoryId + " " + item.CategoryName);
                 }
@@ -23,8 +23,8 @@
 
                 Console.WriteLine();
 
-                var orderDetail = db.OrderDetails.First();
-                Console.WriteLine(orderDetail.Product.ProductName);*/
+                OrderDetail orderDetail = db.OrderDetails.First();
+                Console.WriteLine(orderDetail.Product.ProductName);
             }
         }
     }

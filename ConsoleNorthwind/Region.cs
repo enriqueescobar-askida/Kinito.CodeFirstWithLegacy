@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,7 +20,16 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Region
     {
+        [Column(@"RegionID", Order = 1, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Region ID")]
         public int RegionId { get; set; } // RegionID (Primary key)
+
+        [Required]
+        [MaxLength(50)]
+        [StringLength(50)]
+        [Display(Name = "Region description")]
         public string RegionDescription { get; set; } // RegionDescription (length: 50)
 
         // Reverse navigation

@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,12 +28,10 @@ namespace ConsoleNorthwind
         public CategoryConfiguration(string schema)
         {
             ToTable("Categories", schema);
-            HasKey(x => x.CategoryId);
-
-            Property(x => x.CategoryId).HasColumnName(@"CategoryID").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
-            Property(x => x.CategoryName).HasColumnName(@"CategoryName").HasColumnType("nvarchar").IsRequired().HasMaxLength(15);
-            Property(x => x.Description).HasColumnName(@"Description").HasColumnType("ntext").IsOptional().IsMaxLength();
-            Property(x => x.Picture).HasColumnName(@"Picture").HasColumnType("image").IsOptional().HasMaxLength(2147483647);
+            Property(x => x.CategoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(x => x.CategoryName).HasColumnName(@"CategoryName").HasColumnType("nvarchar");
+            Property(x => x.Description).HasColumnName(@"Description").HasColumnType("ntext").IsOptional();
+            Property(x => x.Picture).HasColumnName(@"Picture").HasColumnType("image").IsOptional();
         }
     }
 

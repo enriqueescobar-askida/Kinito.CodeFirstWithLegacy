@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,31 +20,141 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Invoice
     {
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Display(Name = "Ship name")]
         public string ShipName { get; set; } // ShipName (length: 40)
+
+        [MaxLength(60)]
+        [StringLength(60)]
+        [Display(Name = "Ship address")]
         public string ShipAddress { get; set; } // ShipAddress (length: 60)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship city")]
         public string ShipCity { get; set; } // ShipCity (length: 15)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship region")]
         public string ShipRegion { get; set; } // ShipRegion (length: 15)
+
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Display(Name = "Ship postal code")]
         public string ShipPostalCode { get; set; } // ShipPostalCode (length: 10)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Ship country")]
         public string ShipCountry { get; set; } // ShipCountry (length: 15)
+
+        [MaxLength(5)]
+        [StringLength(5)]
+        [Display(Name = "Customer ID")]
         public string CustomerId { get; set; } // CustomerID (length: 5)
+
+        [Column(@"CustomerName", Order = 8, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Customer name")]
         public string CustomerName { get; set; } // CustomerName (Primary key) (length: 40)
+
+        [MaxLength(60)]
+        [StringLength(60)]
+        [Display(Name = "Address")]
         public string Address { get; set; } // Address (length: 60)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "City")]
         public string City { get; set; } // City (length: 15)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Region")]
         public string Region { get; set; } // Region (length: 15)
+
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Display(Name = "Postal code")]
         public string PostalCode { get; set; } // PostalCode (length: 10)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Country")]
         public string Country { get; set; } // Country (length: 15)
+
+        [Column(@"Salesperson", Order = 14, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(31)]
+        [StringLength(31)]
+        [Key]
+        [Display(Name = "Salesperson")]
         public string Salesperson { get; set; } // Salesperson (Primary key) (length: 31)
+
+        [Column(@"OrderID", Order = 15, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Order ID")]
         public int OrderId { get; set; } // OrderID (Primary key)
+
+        [Display(Name = "Order date")]
         public System.DateTime? OrderDate { get; set; } // OrderDate
+
+        [Display(Name = "Required date")]
         public System.DateTime? RequiredDate { get; set; } // RequiredDate
+
+        [Display(Name = "Shipped date")]
         public System.DateTime? ShippedDate { get; set; } // ShippedDate
+
+        [Column(@"ShipperName", Order = 19, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Shipper name")]
         public string ShipperName { get; set; } // ShipperName (Primary key) (length: 40)
+
+        [Column(@"ProductID", Order = 20, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Product ID")]
         public int ProductId { get; set; } // ProductID (Primary key)
+
+        [Column(@"ProductName", Order = 21, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
+
+        [Column(@"UnitPrice", Order = 22, TypeName = "money")]
+        [Required]
+        [Key]
+        [Display(Name = "Unit price")]
         public decimal UnitPrice { get; set; } // UnitPrice (Primary key)
+
+        [Column(@"Quantity", Order = 23, TypeName = "smallint")]
+        [Required]
+        [Key]
+        [Display(Name = "Quantity")]
         public short Quantity { get; set; } // Quantity (Primary key)
+
+        [Column(@"Discount", Order = 24, TypeName = "real")]
+        [Required]
+        [Key]
+        [Display(Name = "Discount")]
         public float Discount { get; set; } // Discount (Primary key)
+
+        [Display(Name = "Extended price")]
         public decimal? ExtendedPrice { get; set; } // ExtendedPrice
+
+        [Display(Name = "Freight")]
         public decimal? Freight { get; set; } // Freight
     }
 

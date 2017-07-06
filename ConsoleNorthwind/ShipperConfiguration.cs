@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,11 +28,9 @@ namespace ConsoleNorthwind
         public ShipperConfiguration(string schema)
         {
             ToTable("Shippers", schema);
-            HasKey(x => x.ShipperId);
-
-            Property(x => x.ShipperId).HasColumnName(@"ShipperID").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
-            Property(x => x.CompanyName).HasColumnName(@"CompanyName").HasColumnType("nvarchar").IsRequired().HasMaxLength(40);
-            Property(x => x.Phone).HasColumnName(@"Phone").HasColumnType("nvarchar").IsOptional().HasMaxLength(24);
+            Property(x => x.ShipperId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(x => x.CompanyName).HasColumnName(@"CompanyName").HasColumnType("nvarchar");
+            Property(x => x.Phone).HasColumnName(@"Phone").HasColumnType("nvarchar").IsOptional();
         }
     }
 

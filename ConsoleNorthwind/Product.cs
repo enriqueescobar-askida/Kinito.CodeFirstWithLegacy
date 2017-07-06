@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,15 +20,43 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Product
     {
+        [Column(@"ProductID", Order = 1, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Product ID")]
         public int ProductId { get; set; } // ProductID (Primary key)
+
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (length: 40)
+
+        [Display(Name = "Supplier ID")]
         public int? SupplierId { get; set; } // SupplierID
+
+        [Display(Name = "Category ID")]
         public int? CategoryId { get; set; } // CategoryID
+
+        [MaxLength(20)]
+        [StringLength(20)]
+        [Display(Name = "Quantity per unit")]
         public string QuantityPerUnit { get; set; } // QuantityPerUnit (length: 20)
+
+        [Display(Name = "Unit price")]
         public decimal? UnitPrice { get; set; } // UnitPrice
+
+        [Display(Name = "Units in stock")]
         public short? UnitsInStock { get; set; } // UnitsInStock
+
+        [Display(Name = "Units on order")]
         public short? UnitsOnOrder { get; set; } // UnitsOnOrder
+
+        [Display(Name = "Reorder level")]
         public short? ReorderLevel { get; set; } // ReorderLevel
+
+        [Required]
+        [Display(Name = "Discontinued")]
         public bool Discontinued { get; set; } // Discontinued
 
         // Reverse navigation

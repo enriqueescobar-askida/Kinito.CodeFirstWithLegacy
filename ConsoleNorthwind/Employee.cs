@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,23 +20,89 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Employee
     {
+        [Column(@"EmployeeID", Order = 1, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Employee ID")]
         public int EmployeeId { get; set; } // EmployeeID (Primary key)
+
+        [Required]
+        [MaxLength(20)]
+        [StringLength(20)]
+        [Display(Name = "Last name")]
         public string LastName { get; set; } // LastName (length: 20)
+
+        [Required]
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Display(Name = "First name")]
         public string FirstName { get; set; } // FirstName (length: 10)
+
+        [MaxLength(30)]
+        [StringLength(30)]
+        [Display(Name = "Title")]
         public string Title { get; set; } // Title (length: 30)
+
+        [MaxLength(25)]
+        [StringLength(25)]
+        [Display(Name = "Title of courtesy")]
         public string TitleOfCourtesy { get; set; } // TitleOfCourtesy (length: 25)
+
+        [Display(Name = "Birth date")]
         public System.DateTime? BirthDate { get; set; } // BirthDate
+
+        [Display(Name = "Hire date")]
         public System.DateTime? HireDate { get; set; } // HireDate
+
+        [MaxLength(60)]
+        [StringLength(60)]
+        [Display(Name = "Address")]
         public string Address { get; set; } // Address (length: 60)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "City")]
         public string City { get; set; } // City (length: 15)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Region")]
         public string Region { get; set; } // Region (length: 15)
+
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Display(Name = "Postal code")]
         public string PostalCode { get; set; } // PostalCode (length: 10)
+
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "Country")]
         public string Country { get; set; } // Country (length: 15)
+
+        [MaxLength(24)]
+        [StringLength(24)]
+        [Display(Name = "Home phone")]
         public string HomePhone { get; set; } // HomePhone (length: 24)
+
+        [MaxLength(4)]
+        [StringLength(4)]
+        [Display(Name = "Extension")]
         public string Extension { get; set; } // Extension (length: 4)
+
+        [MaxLength(2147483647)]
+        [Display(Name = "Photo")]
         public byte[] Photo { get; set; } // Photo (length: 2147483647)
+
+        [MaxLength]
+        [Display(Name = "Notes")]
         public string Notes { get; set; } // Notes (length: 1073741823)
+
+        [Display(Name = "Reports to")]
         public int? ReportsTo { get; set; } // ReportsTo
+
+        [MaxLength(255)]
+        [StringLength(255)]
+        [Display(Name = "Photo path")]
         public string PhotoPath { get; set; } // PhotoPath (length: 255)
 
         // Reverse navigation

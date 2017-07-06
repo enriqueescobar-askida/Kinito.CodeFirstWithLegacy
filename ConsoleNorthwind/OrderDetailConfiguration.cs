@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,13 +28,11 @@ namespace ConsoleNorthwind
         public OrderDetailConfiguration(string schema)
         {
             ToTable("Order Details", schema);
-            HasKey(x => new { x.OrderId, x.ProductId });
-
-            Property(x => x.OrderId).HasColumnName(@"OrderID").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.ProductId).HasColumnName(@"ProductID").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").IsRequired().HasPrecision(19,4);
-            Property(x => x.Quantity).HasColumnName(@"Quantity").HasColumnType("smallint").IsRequired();
-            Property(x => x.Discount).HasColumnName(@"Discount").HasColumnType("real").IsRequired();
+            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.ProductId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").HasPrecision(19,4);
+            Property(x => x.Quantity).HasColumnName(@"Quantity").HasColumnType("smallint");
+            Property(x => x.Discount).HasColumnName(@"Discount").HasColumnType("real");
 
             // Foreign keys
             HasRequired(a => a.Order).WithMany(b => b.OrderDetails).HasForeignKey(c => c.OrderId).WillCascadeOnDelete(false); // FK_Order_Details_Orders

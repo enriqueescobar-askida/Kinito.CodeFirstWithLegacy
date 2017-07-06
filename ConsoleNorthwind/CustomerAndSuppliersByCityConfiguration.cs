@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,12 +28,10 @@ namespace ConsoleNorthwind
         public CustomerAndSuppliersByCityConfiguration(string schema)
         {
             ToTable("Customer and Suppliers by City", schema);
-            HasKey(x => new { x.CompanyName, x.Relationship });
-
-            Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar").IsOptional().HasMaxLength(15);
-            Property(x => x.CompanyName).HasColumnName(@"CompanyName").HasColumnType("nvarchar").IsRequired().HasMaxLength(40).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.ContactName).HasColumnName(@"ContactName").HasColumnType("nvarchar").IsOptional().HasMaxLength(30);
-            Property(x => x.Relationship).HasColumnName(@"Relationship").HasColumnType("varchar").IsRequired().IsUnicode(false).HasMaxLength(9).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.CompanyName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.ContactName).HasColumnName(@"ContactName").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.Relationship).IsUnicode(false).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
         }
     }
 

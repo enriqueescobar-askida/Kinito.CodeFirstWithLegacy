@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,7 +20,16 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CustomerDemographic
     {
+        [Column(@"CustomerTypeID", Order = 1, TypeName = "nchar")]
+        [Required]
+        [MaxLength(10)]
+        [StringLength(10)]
+        [Key]
+        [Display(Name = "Customer type ID")]
         public string CustomerTypeId { get; set; } // CustomerTypeID (Primary key) (length: 10)
+
+        [MaxLength]
+        [Display(Name = "Customer desc")]
         public string CustomerDesc { get; set; } // CustomerDesc (length: 1073741823)
 
         // Reverse navigation

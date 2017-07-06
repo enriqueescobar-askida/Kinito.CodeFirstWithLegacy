@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,11 +28,9 @@ namespace ConsoleNorthwind
         public TerritoryConfiguration(string schema)
         {
             ToTable("Territories", schema);
-            HasKey(x => x.TerritoryId);
-
-            Property(x => x.TerritoryId).HasColumnName(@"TerritoryID").HasColumnType("nvarchar").IsRequired().HasMaxLength(20).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.TerritoryDescription).HasColumnName(@"TerritoryDescription").HasColumnType("nchar").IsRequired().IsFixedLength().HasMaxLength(50);
-            Property(x => x.RegionId).HasColumnName(@"RegionID").HasColumnType("int").IsRequired();
+            Property(x => x.TerritoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.TerritoryDescription).HasColumnName(@"TerritoryDescription").HasColumnType("nchar").IsFixedLength();
+            Property(x => x.RegionId).HasColumnName(@"RegionID").HasColumnType("int");
 
             // Foreign keys
             HasRequired(a => a.Region).WithMany(b => b.Territories).HasForeignKey(c => c.RegionId).WillCascadeOnDelete(false); // FK_Territories_Region

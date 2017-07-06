@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -26,10 +28,8 @@ namespace ConsoleNorthwind
         public CustomerDemographicConfiguration(string schema)
         {
             ToTable("CustomerDemographics", schema);
-            HasKey(x => x.CustomerTypeId);
-
-            Property(x => x.CustomerTypeId).HasColumnName(@"CustomerTypeID").HasColumnType("nchar").IsRequired().IsFixedLength().HasMaxLength(10).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.CustomerDesc).HasColumnName(@"CustomerDesc").HasColumnType("ntext").IsOptional().IsMaxLength();
+            Property(x => x.CustomerTypeId).IsFixedLength().HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.CustomerDesc).HasColumnName(@"CustomerDesc").HasColumnType("ntext").IsOptional();
         }
     }
 

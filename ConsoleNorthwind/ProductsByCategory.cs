@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,10 +20,34 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class ProductsByCategory
     {
+        [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Key]
+        [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
+
+        [Column(@"ProductName", Order = 2, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
+
+        [MaxLength(20)]
+        [StringLength(20)]
+        [Display(Name = "Quantity per unit")]
         public string QuantityPerUnit { get; set; } // QuantityPerUnit (length: 20)
+
+        [Display(Name = "Units in stock")]
         public short? UnitsInStock { get; set; } // UnitsInStock
+
+        [Column(@"Discontinued", Order = 5, TypeName = "bit")]
+        [Required]
+        [Key]
+        [Display(Name = "Discontinued")]
         public bool Discontinued { get; set; } // Discontinued (Primary key)
     }
 

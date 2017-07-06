@@ -10,6 +10,8 @@
 // TargetFrameworkVersion = 4.7
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConsoleNorthwind
 {
@@ -18,9 +20,30 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CustomerAndSuppliersByCity
     {
+        [MaxLength(15)]
+        [StringLength(15)]
+        [Display(Name = "City")]
         public string City { get; set; } // City (length: 15)
+
+        [Column(@"CompanyName", Order = 2, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Company name")]
         public string CompanyName { get; set; } // CompanyName (Primary key) (length: 40)
+
+        [MaxLength(30)]
+        [StringLength(30)]
+        [Display(Name = "Contact name")]
         public string ContactName { get; set; } // ContactName (length: 30)
+
+        [Column(@"Relationship", Order = 4, TypeName = "varchar")]
+        [Required]
+        [MaxLength(9)]
+        [StringLength(9)]
+        [Key]
+        [Display(Name = "Relationship")]
         public string Relationship { get; set; } // Relationship (Primary key) (length: 9)
     }
 
