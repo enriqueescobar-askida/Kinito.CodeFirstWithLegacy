@@ -272,6 +272,7 @@ namespace ConsoleNorthwind
             return System.Threading.Tasks.Task.FromResult(TenMostExpensiveProducts(out procResult));
         }
 
+        // Table Valued Functions
     }
 }
 // </auto-generated>

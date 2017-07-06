@@ -87,6 +87,8 @@ namespace ConsoleNorthwind
         System.Collections.Generic.List<TenMostExpensiveProductsReturnModel> TenMostExpensiveProducts(out int procResult);
         System.Threading.Tasks.Task<System.Collections.Generic.List<TenMostExpensiveProductsReturnModel>> TenMostExpensiveProductsAsync();
 
+
+        // Table Valued Functions
     }
 
 }

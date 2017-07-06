@@ -96,6 +96,8 @@ namespace ConsoleNorthwind
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Conventions.Add(new CodeFirstStoreFunctions.FunctionsConvention<NorthwindDbContext>("dbo"));
+
             modelBuilder.Configurations.Add(new AlphabeticalListOfProductConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
             modelBuilder.Configurations.Add(new CategorySalesFor1997Configuration());
@@ -382,6 +384,7 @@ namespace ConsoleNorthwind
             return procResultData;
         }
 
+        // Table Valued Functions
     }
 }
 // </auto-generated>
