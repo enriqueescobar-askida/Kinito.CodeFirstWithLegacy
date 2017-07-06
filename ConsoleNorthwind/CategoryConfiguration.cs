@@ -27,11 +27,8 @@ namespace ConsoleNorthwind
 
         public CategoryConfiguration(string schema)
         {
-            ToTable("Categories", schema);
-            Property(x => x.CategoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.CategoryName).HasColumnName(@"CategoryName").HasColumnType("nvarchar");
-            Property(x => x.Description).HasColumnName(@"Description").HasColumnType("ntext").IsOptional();
-            Property(x => x.Picture).HasColumnName(@"Picture").HasColumnType("image").IsOptional();
+            Property(x => x.Description).IsOptional();
+            Property(x => x.Picture).IsOptional();
         }
     }
 

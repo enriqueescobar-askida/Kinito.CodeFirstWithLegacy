@@ -17,9 +17,11 @@ namespace ConsoleNorthwind
 {
 
     // Products by Category
+    [Table("Products by Category", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class ProductsByCategory
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]
         [Required]
         [MaxLength(15)]
@@ -28,6 +30,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 2, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
@@ -36,14 +39,17 @@ namespace ConsoleNorthwind
         [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
 
+        [Column(@"QuantityPerUnit", Order = 3, TypeName = "nvarchar")]
         [MaxLength(20)]
         [StringLength(20)]
         [Display(Name = "Quantity per unit")]
         public string QuantityPerUnit { get; set; } // QuantityPerUnit (length: 20)
 
+        [Column(@"UnitsInStock", Order = 4, TypeName = "smallint")]
         [Display(Name = "Units in stock")]
         public short? UnitsInStock { get; set; } // UnitsInStock
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"Discontinued", Order = 5, TypeName = "bit")]
         [Required]
         [Key]

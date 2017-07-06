@@ -17,15 +17,18 @@ namespace ConsoleNorthwind
 {
 
     // Current Product List
+    [Table("Current Product List", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CurrentProductList
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"ProductID", Order = 1, TypeName = "int")]
         [Required]
         [Key]
         [Display(Name = "Product ID")]
         public int ProductId { get; set; } // ProductID (Primary key)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 2, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]

@@ -27,9 +27,7 @@ namespace ConsoleNorthwind
 
         public OrderSubtotalConfiguration(string schema)
         {
-            ToTable("Order Subtotals", schema);
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.Subtotal).HasColumnName(@"Subtotal").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 

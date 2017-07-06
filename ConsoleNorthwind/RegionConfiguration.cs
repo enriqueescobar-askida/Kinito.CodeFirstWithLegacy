@@ -27,9 +27,7 @@ namespace ConsoleNorthwind
 
         public RegionConfiguration(string schema)
         {
-            ToTable("Region", schema);
-            Property(x => x.RegionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.RegionDescription).HasColumnName(@"RegionDescription").HasColumnType("nchar").IsFixedLength();
+            Property(x => x.RegionDescription).IsFixedLength();
         }
     }
 

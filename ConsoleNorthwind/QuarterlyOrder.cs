@@ -19,24 +19,29 @@ namespace ConsoleNorthwind
     // The table 'Quarterly Orders' is not usable by entity framework because it
     // does not have a primary key. It is listed here for completeness.
     // Quarterly Orders
+    [NotMapped]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class QuarterlyOrder
     {
+        [Column(@"CustomerID", Order = 1, TypeName = "nchar")]
         [MaxLength(5)]
         [StringLength(5)]
         [Display(Name = "Customer ID")]
         public string CustomerId { get; set; } // CustomerID (length: 5)
 
+        [Column(@"CompanyName", Order = 2, TypeName = "nvarchar")]
         [MaxLength(40)]
         [StringLength(40)]
         [Display(Name = "Company name")]
         public string CompanyName { get; set; } // CompanyName (length: 40)
 
+        [Column(@"City", Order = 3, TypeName = "nvarchar")]
         [MaxLength(15)]
         [StringLength(15)]
         [Display(Name = "City")]
         public string City { get; set; } // City (length: 15)
 
+        [Column(@"Country", Order = 4, TypeName = "nvarchar")]
         [MaxLength(15)]
         [StringLength(15)]
         [Display(Name = "Country")]

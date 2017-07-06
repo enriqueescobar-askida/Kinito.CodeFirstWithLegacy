@@ -27,18 +27,13 @@ namespace ConsoleNorthwind
 
         public AlphabeticalListOfProductConfiguration(string schema)
         {
-            ToTable("Alphabetical list of products", schema);
-            Property(x => x.ProductId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.SupplierId).HasColumnName(@"SupplierID").HasColumnType("int").IsOptional();
-            Property(x => x.CategoryId).HasColumnName(@"CategoryID").HasColumnType("int").IsOptional();
-            Property(x => x.QuantityPerUnit).HasColumnName(@"QuantityPerUnit").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").IsOptional().HasPrecision(19,4);
-            Property(x => x.UnitsInStock).HasColumnName(@"UnitsInStock").HasColumnType("smallint").IsOptional();
-            Property(x => x.UnitsOnOrder).HasColumnName(@"UnitsOnOrder").HasColumnType("smallint").IsOptional();
-            Property(x => x.ReorderLevel).HasColumnName(@"ReorderLevel").HasColumnType("smallint").IsOptional();
-            Property(x => x.Discontinued).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.CategoryName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.SupplierId).IsOptional();
+            Property(x => x.CategoryId).IsOptional();
+            Property(x => x.QuantityPerUnit).IsOptional();
+            Property(x => x.UnitPrice).IsOptional().HasPrecision(19,4);
+            Property(x => x.UnitsInStock).IsOptional();
+            Property(x => x.UnitsOnOrder).IsOptional();
+            Property(x => x.ReorderLevel).IsOptional();
         }
     }
 

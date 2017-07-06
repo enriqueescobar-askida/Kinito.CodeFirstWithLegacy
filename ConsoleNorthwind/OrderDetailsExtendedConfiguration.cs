@@ -27,14 +27,8 @@ namespace ConsoleNorthwind
 
         public OrderDetailsExtendedConfiguration(string schema)
         {
-            ToTable("Order Details Extended", schema);
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.UnitPrice).HasPrecision(19,4).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.Quantity).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.Discount).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ExtendedPrice).HasColumnName(@"ExtendedPrice").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.UnitPrice).HasPrecision(19,4);
+            Property(x => x.ExtendedPrice).IsOptional().HasPrecision(19,4);
         }
     }
 

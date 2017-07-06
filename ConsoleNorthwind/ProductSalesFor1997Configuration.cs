@@ -27,10 +27,7 @@ namespace ConsoleNorthwind
 
         public ProductSalesFor1997Configuration(string schema)
         {
-            ToTable("Product Sales for 1997", schema);
-            Property(x => x.CategoryName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductSales).HasColumnName(@"ProductSales").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.ProductSales).IsOptional().HasPrecision(19,4);
         }
     }
 

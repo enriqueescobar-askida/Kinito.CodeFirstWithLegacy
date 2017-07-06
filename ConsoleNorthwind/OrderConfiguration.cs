@@ -27,26 +27,20 @@ namespace ConsoleNorthwind
 
         public OrderConfiguration(string schema)
         {
-            ToTable("Orders", schema);
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.CustomerId).HasColumnName(@"CustomerID").HasColumnType("nchar").IsOptional().IsFixedLength();
-            Property(x => x.EmployeeId).HasColumnName(@"EmployeeID").HasColumnType("int").IsOptional();
-            Property(x => x.OrderDate).HasColumnName(@"OrderDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.RequiredDate).HasColumnName(@"RequiredDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.ShippedDate).HasColumnName(@"ShippedDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.ShipVia).HasColumnName(@"ShipVia").HasColumnType("int").IsOptional();
-            Property(x => x.Freight).HasColumnName(@"Freight").HasColumnType("money").IsOptional().HasPrecision(19,4);
-            Property(x => x.ShipName).HasColumnName(@"ShipName").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ShipAddress).HasColumnName(@"ShipAddress").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ShipCity).HasColumnName(@"ShipCity").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ShipRegion).HasColumnName(@"ShipRegion").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ShipPostalCode).HasColumnName(@"ShipPostalCode").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ShipCountry).HasColumnName(@"ShipCountry").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.CustomerId).IsOptional().IsFixedLength();
+            Property(x => x.EmployeeId).IsOptional();
+            Property(x => x.OrderDate).IsOptional();
+            Property(x => x.RequiredDate).IsOptional();
+            Property(x => x.ShippedDate).IsOptional();
+            Property(x => x.ShipVia).IsOptional();
+            Property(x => x.Freight).IsOptional().HasPrecision(19,4);
+            Property(x => x.ShipName).IsOptional();
+            Property(x => x.ShipAddress).IsOptional();
+            Property(x => x.ShipCity).IsOptional();
+            Property(x => x.ShipRegion).IsOptional();
+            Property(x => x.ShipPostalCode).IsOptional();
+            Property(x => x.ShipCountry).IsOptional();
 
-            // Foreign keys
-            HasOptional(a => a.Customer).WithMany(b => b.Orders).HasForeignKey(c => c.CustomerId).WillCascadeOnDelete(false); // FK_Orders_Customers
-            HasOptional(a => a.Employee).WithMany(b => b.Orders).HasForeignKey(c => c.EmployeeId).WillCascadeOnDelete(false); // FK_Orders_Employees
-            HasOptional(a => a.Shipper).WithMany(b => b.Orders).HasForeignKey(c => c.ShipVia).WillCascadeOnDelete(false); // FK_Orders_Shippers
         }
     }
 

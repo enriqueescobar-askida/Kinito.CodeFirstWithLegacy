@@ -27,13 +27,8 @@ namespace ConsoleNorthwind
 
         public TerritoryConfiguration(string schema)
         {
-            ToTable("Territories", schema);
-            Property(x => x.TerritoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.TerritoryDescription).HasColumnName(@"TerritoryDescription").HasColumnType("nchar").IsFixedLength();
-            Property(x => x.RegionId).HasColumnName(@"RegionID").HasColumnType("int");
+            Property(x => x.TerritoryDescription).IsFixedLength();
 
-            // Foreign keys
-            HasRequired(a => a.Region).WithMany(b => b.Territories).HasForeignKey(c => c.RegionId).WillCascadeOnDelete(false); // FK_Territories_Region
         }
     }
 

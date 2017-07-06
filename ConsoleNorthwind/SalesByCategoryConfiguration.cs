@@ -27,11 +27,7 @@ namespace ConsoleNorthwind
 
         public SalesByCategoryConfiguration(string schema)
         {
-            ToTable("Sales by Category", schema);
-            Property(x => x.CategoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.CategoryName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductSales).HasColumnName(@"ProductSales").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.ProductSales).IsOptional().HasPrecision(19,4);
         }
     }
 

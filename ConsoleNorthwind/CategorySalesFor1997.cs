@@ -17,9 +17,11 @@ namespace ConsoleNorthwind
 {
 
     // Category Sales for 1997
+    [Table("Category Sales for 1997", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CategorySalesFor1997
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]
         [Required]
         [MaxLength(15)]
@@ -28,6 +30,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
 
+        [Column(@"CategorySales", Order = 2, TypeName = "money")]
         [Display(Name = "Category sales")]
         public decimal? CategorySales { get; set; } // CategorySales
     }

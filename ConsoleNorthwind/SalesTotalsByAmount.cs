@@ -17,18 +17,22 @@ namespace ConsoleNorthwind
 {
 
     // Sales Totals by Amount
+    [Table("Sales Totals by Amount", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class SalesTotalsByAmount
     {
+        [Column(@"SaleAmount", Order = 1, TypeName = "money")]
         [Display(Name = "Sale amount")]
         public decimal? SaleAmount { get; set; } // SaleAmount
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 2, TypeName = "int")]
         [Required]
         [Key]
         [Display(Name = "Order ID")]
         public int OrderId { get; set; } // OrderID (Primary key)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CompanyName", Order = 3, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
@@ -37,6 +41,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Company name")]
         public string CompanyName { get; set; } // CompanyName (Primary key) (length: 40)
 
+        [Column(@"ShippedDate", Order = 4, TypeName = "datetime")]
         [Display(Name = "Shipped date")]
         public System.DateTime? ShippedDate { get; set; } // ShippedDate
     }

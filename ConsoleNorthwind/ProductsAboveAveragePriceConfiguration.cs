@@ -27,9 +27,7 @@ namespace ConsoleNorthwind
 
         public ProductsAboveAveragePriceConfiguration(string schema)
         {
-            ToTable("Products Above Average Price", schema);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.UnitPrice).IsOptional().HasPrecision(19,4);
         }
     }
 

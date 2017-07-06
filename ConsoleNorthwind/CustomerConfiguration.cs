@@ -27,18 +27,16 @@ namespace ConsoleNorthwind
 
         public CustomerConfiguration(string schema)
         {
-            ToTable("Customers", schema);
-            Property(x => x.CustomerId).IsFixedLength().HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.CompanyName).HasColumnName(@"CompanyName").HasColumnType("nvarchar");
-            Property(x => x.ContactName).HasColumnName(@"ContactName").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.ContactTitle).HasColumnName(@"ContactTitle").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Address).HasColumnName(@"Address").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Region).HasColumnName(@"Region").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.PostalCode).HasColumnName(@"PostalCode").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Country).HasColumnName(@"Country").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Phone).HasColumnName(@"Phone").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Fax).HasColumnName(@"Fax").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.CustomerId).IsFixedLength();
+            Property(x => x.ContactName).IsOptional();
+            Property(x => x.ContactTitle).IsOptional();
+            Property(x => x.Address).IsOptional();
+            Property(x => x.City).IsOptional();
+            Property(x => x.Region).IsOptional();
+            Property(x => x.PostalCode).IsOptional();
+            Property(x => x.Country).IsOptional();
+            Property(x => x.Phone).IsOptional();
+            Property(x => x.Fax).IsOptional();
             HasMany(t => t.CustomerDemographics).WithMany(t => t.Customers).Map(m =>
             {
                 m.ToTable("CustomerCustomerDemo", "dbo");

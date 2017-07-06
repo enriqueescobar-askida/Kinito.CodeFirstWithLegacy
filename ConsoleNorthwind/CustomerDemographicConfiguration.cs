@@ -27,9 +27,8 @@ namespace ConsoleNorthwind
 
         public CustomerDemographicConfiguration(string schema)
         {
-            ToTable("CustomerDemographics", schema);
-            Property(x => x.CustomerTypeId).IsFixedLength().HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.CustomerDesc).HasColumnName(@"CustomerDesc").HasColumnType("ntext").IsOptional();
+            Property(x => x.CustomerTypeId).IsFixedLength();
+            Property(x => x.CustomerDesc).IsOptional();
         }
     }
 

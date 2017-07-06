@@ -27,28 +27,22 @@ namespace ConsoleNorthwind
 
         public EmployeeConfiguration(string schema)
         {
-            ToTable("Employees", schema);
-            Property(x => x.EmployeeId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.LastName).HasColumnName(@"LastName").HasColumnType("nvarchar");
-            Property(x => x.FirstName).HasColumnName(@"FirstName").HasColumnType("nvarchar");
-            Property(x => x.Title).HasColumnName(@"Title").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.TitleOfCourtesy).HasColumnName(@"TitleOfCourtesy").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.BirthDate).HasColumnName(@"BirthDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.HireDate).HasColumnName(@"HireDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.Address).HasColumnName(@"Address").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Region).HasColumnName(@"Region").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.PostalCode).HasColumnName(@"PostalCode").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Country).HasColumnName(@"Country").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.HomePhone).HasColumnName(@"HomePhone").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Extension).HasColumnName(@"Extension").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Photo).HasColumnName(@"Photo").HasColumnType("image").IsOptional();
-            Property(x => x.Notes).HasColumnName(@"Notes").HasColumnType("ntext").IsOptional();
-            Property(x => x.ReportsTo).HasColumnName(@"ReportsTo").HasColumnType("int").IsOptional();
-            Property(x => x.PhotoPath).HasColumnName(@"PhotoPath").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.Title).IsOptional();
+            Property(x => x.TitleOfCourtesy).IsOptional();
+            Property(x => x.BirthDate).IsOptional();
+            Property(x => x.HireDate).IsOptional();
+            Property(x => x.Address).IsOptional();
+            Property(x => x.City).IsOptional();
+            Property(x => x.Region).IsOptional();
+            Property(x => x.PostalCode).IsOptional();
+            Property(x => x.Country).IsOptional();
+            Property(x => x.HomePhone).IsOptional();
+            Property(x => x.Extension).IsOptional();
+            Property(x => x.Photo).IsOptional();
+            Property(x => x.Notes).IsOptional();
+            Property(x => x.ReportsTo).IsOptional();
+            Property(x => x.PhotoPath).IsOptional();
 
-            // Foreign keys
-            HasOptional(a => a.Employee_ReportsTo).WithMany(b => b.Employees).HasForeignKey(c => c.ReportsTo).WillCascadeOnDelete(false); // FK_Employees_Employees
             HasMany(t => t.Territories).WithMany(t => t.Employees).Map(m =>
             {
                 m.ToTable("EmployeeTerritories", "dbo");

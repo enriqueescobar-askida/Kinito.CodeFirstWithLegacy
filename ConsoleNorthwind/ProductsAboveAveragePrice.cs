@@ -17,9 +17,11 @@ namespace ConsoleNorthwind
 {
 
     // Products Above Average Price
+    [Table("Products Above Average Price", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class ProductsAboveAveragePrice
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 1, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
@@ -28,6 +30,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
 
+        [Column(@"UnitPrice", Order = 2, TypeName = "money")]
         [Display(Name = "Unit price")]
         public decimal? UnitPrice { get; set; } // UnitPrice
     }

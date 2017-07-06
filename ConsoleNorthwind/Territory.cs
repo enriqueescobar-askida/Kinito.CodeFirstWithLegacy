@@ -17,10 +17,13 @@ namespace ConsoleNorthwind
 {
 
     // Territories
+    [Table("Territories", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Territory
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"TerritoryID", Order = 1, TypeName = "nvarchar")]
+        [Index(@"PK_Territories", 1, IsUnique = true, IsClustered = false)]
         [Required]
         [MaxLength(20)]
         [StringLength(20)]
@@ -28,12 +31,14 @@ namespace ConsoleNorthwind
         [Display(Name = "Territory ID")]
         public string TerritoryId { get; set; } // TerritoryID (Primary key) (length: 20)
 
+        [Column(@"TerritoryDescription", Order = 2, TypeName = "nchar")]
         [Required]
         [MaxLength(50)]
         [StringLength(50)]
         [Display(Name = "Territory description")]
         public string TerritoryDescription { get; set; } // TerritoryDescription (length: 50)
 
+        [Column(@"RegionID", Order = 3, TypeName = "int")]
         [Required]
         [Display(Name = "Region ID")]
         public int RegionId { get; set; } // RegionID
@@ -50,7 +55,7 @@ namespace ConsoleNorthwind
         /// <summary>
         /// Parent Region pointed by [Territories].([RegionId]) (FK_Territories_Region)
         /// </summary>
-        public virtual Region Region { get; set; } // FK_Territories_Region
+        [ForeignKey("RegionId")] public virtual Region Region { get; set; } // FK_Territories_Region
 
         public Territory()
         {

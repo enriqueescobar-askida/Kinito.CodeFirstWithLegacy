@@ -27,9 +27,6 @@ namespace ConsoleNorthwind
 
         public CurrentProductListConfiguration(string schema)
         {
-            ToTable("Current Product List", schema);
-            Property(x => x.ProductId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
         }
     }
 

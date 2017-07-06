@@ -17,15 +17,18 @@ namespace ConsoleNorthwind
 {
 
     // Order Subtotals
+    [Table("Order Subtotals", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class OrderSubtotal
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]
         [Required]
         [Key]
         [Display(Name = "Order ID")]
         public int OrderId { get; set; } // OrderID (Primary key)
 
+        [Column(@"Subtotal", Order = 2, TypeName = "money")]
         [Display(Name = "Subtotal")]
         public decimal? Subtotal { get; set; } // Subtotal
     }

@@ -27,12 +27,8 @@ namespace ConsoleNorthwind
 
         public ProductsByCategoryConfiguration(string schema)
         {
-            ToTable("Products by Category", schema);
-            Property(x => x.CategoryName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.QuantityPerUnit).HasColumnName(@"QuantityPerUnit").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.UnitsInStock).HasColumnName(@"UnitsInStock").HasColumnType("smallint").IsOptional();
-            Property(x => x.Discontinued).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.QuantityPerUnit).IsOptional();
+            Property(x => x.UnitsInStock).IsOptional();
         }
     }
 

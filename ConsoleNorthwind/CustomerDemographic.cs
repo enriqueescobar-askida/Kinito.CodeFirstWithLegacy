@@ -17,10 +17,13 @@ namespace ConsoleNorthwind
 {
 
     // CustomerDemographics
+    [Table("CustomerDemographics", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CustomerDemographic
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CustomerTypeID", Order = 1, TypeName = "nchar")]
+        [Index(@"PK_CustomerDemographics", 1, IsUnique = true, IsClustered = false)]
         [Required]
         [MaxLength(10)]
         [StringLength(10)]
@@ -28,6 +31,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Customer type ID")]
         public string CustomerTypeId { get; set; } // CustomerTypeID (Primary key) (length: 10)
 
+        [Column(@"CustomerDesc", Order = 2, TypeName = "ntext")]
         [MaxLength]
         [Display(Name = "Customer desc")]
         public string CustomerDesc { get; set; } // CustomerDesc (length: 1073741823)

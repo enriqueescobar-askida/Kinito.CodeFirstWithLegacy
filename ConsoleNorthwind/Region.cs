@@ -17,15 +17,19 @@ namespace ConsoleNorthwind
 {
 
     // Region
+    [Table("Region", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Region
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"RegionID", Order = 1, TypeName = "int")]
+        [Index(@"PK_Region", 1, IsUnique = true, IsClustered = false)]
         [Required]
         [Key]
         [Display(Name = "Region ID")]
         public int RegionId { get; set; } // RegionID (Primary key)
 
+        [Column(@"RegionDescription", Order = 2, TypeName = "nchar")]
         [Required]
         [MaxLength(50)]
         [StringLength(50)]

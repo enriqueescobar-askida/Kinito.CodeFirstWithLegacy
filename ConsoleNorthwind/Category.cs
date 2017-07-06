@@ -17,25 +17,32 @@ namespace ConsoleNorthwind
 {
 
     // Categories
+    [Table("Categories", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Category
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"CategoryID", Order = 1, TypeName = "int")]
+        [Index(@"PK_Categories", 1, IsUnique = true, IsClustered = true)]
         [Required]
         [Key]
         [Display(Name = "Category ID")]
         public int CategoryId { get; set; } // CategoryID (Primary key)
 
+        [Column(@"CategoryName", Order = 2, TypeName = "nvarchar")]
+        [Index(@"CategoryName", 1, IsUnique = false, IsClustered = false)]
         [Required]
         [MaxLength(15)]
         [StringLength(15)]
         [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (length: 15)
 
+        [Column(@"Description", Order = 3, TypeName = "ntext")]
         [MaxLength]
         [Display(Name = "Description")]
         public string Description { get; set; } // Description (length: 1073741823)
 
+        [Column(@"Picture", Order = 4, TypeName = "image")]
         [MaxLength(2147483647)]
         [Display(Name = "Picture")]
         public byte[] Picture { get; set; } // Picture (length: 2147483647)

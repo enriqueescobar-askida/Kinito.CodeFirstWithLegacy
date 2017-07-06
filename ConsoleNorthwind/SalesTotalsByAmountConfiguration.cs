@@ -27,11 +27,8 @@ namespace ConsoleNorthwind
 
         public SalesTotalsByAmountConfiguration(string schema)
         {
-            ToTable("Sales Totals by Amount", schema);
-            Property(x => x.SaleAmount).HasColumnName(@"SaleAmount").HasColumnType("money").IsOptional().HasPrecision(19,4);
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.CompanyName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ShippedDate).HasColumnName(@"ShippedDate").HasColumnType("datetime").IsOptional();
+            Property(x => x.SaleAmount).IsOptional().HasPrecision(19,4);
+            Property(x => x.ShippedDate).IsOptional();
         }
     }
 

@@ -27,11 +27,9 @@ namespace ConsoleNorthwind
 
         public CustomerAndSuppliersByCityConfiguration(string schema)
         {
-            ToTable("Customer and Suppliers by City", schema);
-            Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.CompanyName).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ContactName).HasColumnName(@"ContactName").HasColumnType("nvarchar").IsOptional();
-            Property(x => x.Relationship).IsUnicode(false).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(x => x.City).IsOptional();
+            Property(x => x.ContactName).IsOptional();
+            Property(x => x.Relationship).IsUnicode(false);
         }
     }
 

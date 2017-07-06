@@ -27,10 +27,8 @@ namespace ConsoleNorthwind
 
         public SummaryOfSalesByQuarterConfiguration(string schema)
         {
-            ToTable("Summary of Sales by Quarter", schema);
-            Property(x => x.ShippedDate).HasColumnName(@"ShippedDate").HasColumnType("datetime").IsOptional();
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.Subtotal).HasColumnName(@"Subtotal").HasColumnType("money").IsOptional().HasPrecision(19,4);
+            Property(x => x.ShippedDate).IsOptional();
+            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 

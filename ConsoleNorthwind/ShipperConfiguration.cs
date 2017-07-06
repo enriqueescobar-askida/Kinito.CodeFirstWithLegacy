@@ -27,10 +27,7 @@ namespace ConsoleNorthwind
 
         public ShipperConfiguration(string schema)
         {
-            ToTable("Shippers", schema);
-            Property(x => x.ShipperId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.CompanyName).HasColumnName(@"CompanyName").HasColumnType("nvarchar");
-            Property(x => x.Phone).HasColumnName(@"Phone").HasColumnType("nvarchar").IsOptional();
+            Property(x => x.Phone).IsOptional();
         }
     }
 

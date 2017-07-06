@@ -17,14 +17,17 @@ namespace ConsoleNorthwind
 {
 
     // Customer and Suppliers by City
+    [Table("Customer and Suppliers by City", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class CustomerAndSuppliersByCity
     {
+        [Column(@"City", Order = 1, TypeName = "nvarchar")]
         [MaxLength(15)]
         [StringLength(15)]
         [Display(Name = "City")]
         public string City { get; set; } // City (length: 15)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CompanyName", Order = 2, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
@@ -33,11 +36,13 @@ namespace ConsoleNorthwind
         [Display(Name = "Company name")]
         public string CompanyName { get; set; } // CompanyName (Primary key) (length: 40)
 
+        [Column(@"ContactName", Order = 3, TypeName = "nvarchar")]
         [MaxLength(30)]
         [StringLength(30)]
         [Display(Name = "Contact name")]
         public string ContactName { get; set; } // ContactName (length: 30)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"Relationship", Order = 4, TypeName = "varchar")]
         [Required]
         [MaxLength(9)]

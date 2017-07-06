@@ -17,15 +17,18 @@ namespace ConsoleNorthwind
 {
 
     // Sales by Category
+    [Table("Sales by Category", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class SalesByCategory
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryID", Order = 1, TypeName = "int")]
         [Required]
         [Key]
         [Display(Name = "Category ID")]
         public int CategoryId { get; set; } // CategoryID (Primary key)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 2, TypeName = "nvarchar")]
         [Required]
         [MaxLength(15)]
@@ -34,6 +37,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 3, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
@@ -42,6 +46,7 @@ namespace ConsoleNorthwind
         [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
 
+        [Column(@"ProductSales", Order = 4, TypeName = "money")]
         [Display(Name = "Product sales")]
         public decimal? ProductSales { get; set; } // ProductSales
     }

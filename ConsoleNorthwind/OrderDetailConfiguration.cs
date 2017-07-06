@@ -27,16 +27,8 @@ namespace ConsoleNorthwind
 
         public OrderDetailConfiguration(string schema)
         {
-            ToTable("Order Details", schema);
-            Property(x => x.OrderId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.ProductId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.UnitPrice).HasColumnName(@"UnitPrice").HasColumnType("money").HasPrecision(19,4);
-            Property(x => x.Quantity).HasColumnName(@"Quantity").HasColumnType("smallint");
-            Property(x => x.Discount).HasColumnName(@"Discount").HasColumnType("real");
+            Property(x => x.UnitPrice).HasPrecision(19,4);
 
-            // Foreign keys
-            HasRequired(a => a.Order).WithMany(b => b.OrderDetails).HasForeignKey(c => c.OrderId).WillCascadeOnDelete(false); // FK_Order_Details_Orders
-            HasRequired(a => a.Product).WithMany(b => b.OrderDetails).HasForeignKey(c => c.ProductId).WillCascadeOnDelete(false); // FK_Order_Details_Products
         }
     }
 
