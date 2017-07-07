@@ -26,6 +26,9 @@ namespace ConsoleNorthwind
         System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
         System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; } // CustomerDemographics
         System.Data.Entity.DbSet<Employee> Employees { get; set; } // Employees
+        System.Data.Entity.DbSet<Engineer> Engineers { get; set; } // engineer
+        System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; } // engineer_order
+        System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; } // engineer_order_item
         System.Data.Entity.DbSet<Invoice> Invoices { get; set; } // Invoices
         System.Data.Entity.DbSet<Order> Orders { get; set; } // Orders
         System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; } // Order Details

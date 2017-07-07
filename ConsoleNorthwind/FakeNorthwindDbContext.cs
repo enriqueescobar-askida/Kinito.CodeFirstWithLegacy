@@ -29,6 +29,9 @@ namespace ConsoleNorthwind
         public System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; }
         public System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; }
         public System.Data.Entity.DbSet<Employee> Employees { get; set; }
+        public System.Data.Entity.DbSet<Engineer> Engineers { get; set; }
+        public System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; }
+        public System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; }
         public System.Data.Entity.DbSet<Invoice> Invoices { get; set; }
         public System.Data.Entity.DbSet<Order> Orders { get; set; }
         public System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; }
@@ -58,6 +61,9 @@ namespace ConsoleNorthwind
             CustomerAndSuppliersByCities = new FakeDbSet<CustomerAndSuppliersByCity>("CompanyName", "Relationship");
             CustomerDemographics = new FakeDbSet<CustomerDemographic>("CustomerTypeId");
             Employees = new FakeDbSet<Employee>("EmployeeId");
+            Engineers = new FakeDbSet<Engineer>("EngineerId");
+            EngineerOrders = new FakeDbSet<EngineerOrder>("EngineerOrderId");
+            EngineerOrderItems = new FakeDbSet<EngineerOrderItem>("EngineerOrderItemId");
             Invoices = new FakeDbSet<Invoice>("CustomerName", "Salesperson", "OrderId", "ShipperName", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
             Orders = new FakeDbSet<Order>("OrderId");
             OrderDetails = new FakeDbSet<OrderDetail>("OrderId", "ProductId");

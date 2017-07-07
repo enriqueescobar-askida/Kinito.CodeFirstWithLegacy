@@ -29,6 +29,9 @@ namespace ConsoleNorthwind
         public System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
         public System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; } // CustomerDemographics
         public System.Data.Entity.DbSet<Employee> Employees { get; set; } // Employees
+        public System.Data.Entity.DbSet<Engineer> Engineers { get; set; } // engineer
+        public System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; } // engineer_order
+        public System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; } // engineer_order_item
         public System.Data.Entity.DbSet<Invoice> Invoices { get; set; } // Invoices
         public System.Data.Entity.DbSet<Order> Orders { get; set; } // Orders
         public System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; } // Order Details
@@ -106,6 +109,9 @@ namespace ConsoleNorthwind
             modelBuilder.Configurations.Add(new CustomerAndSuppliersByCityConfiguration());
             modelBuilder.Configurations.Add(new CustomerDemographicConfiguration());
             modelBuilder.Configurations.Add(new EmployeeConfiguration());
+            modelBuilder.Configurations.Add(new EngineerConfiguration());
+            modelBuilder.Configurations.Add(new EngineerOrderConfiguration());
+            modelBuilder.Configurations.Add(new EngineerOrderItemConfiguration());
             modelBuilder.Configurations.Add(new InvoiceConfiguration());
             modelBuilder.Configurations.Add(new OrderConfiguration());
             modelBuilder.Configurations.Add(new OrderDetailConfiguration());
@@ -136,6 +142,9 @@ namespace ConsoleNorthwind
             modelBuilder.Configurations.Add(new CustomerAndSuppliersByCityConfiguration(schema));
             modelBuilder.Configurations.Add(new CustomerDemographicConfiguration(schema));
             modelBuilder.Configurations.Add(new EmployeeConfiguration(schema));
+            modelBuilder.Configurations.Add(new EngineerConfiguration(schema));
+            modelBuilder.Configurations.Add(new EngineerOrderConfiguration(schema));
+            modelBuilder.Configurations.Add(new EngineerOrderItemConfiguration(schema));
             modelBuilder.Configurations.Add(new InvoiceConfiguration(schema));
             modelBuilder.Configurations.Add(new OrderConfiguration(schema));
             modelBuilder.Configurations.Add(new OrderDetailConfiguration(schema));

@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6A6CAF66-F
 		Northwind.bak.zip = Northwind.bak.zip
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{596043C1-F464-47A6-BF21-6ED3EFBF5983}"
+	ProjectSection(SolutionItems) = preProject
+		1.0_LegacyNamingConvention.sql = 1.0_LegacyNamingConvention.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
