@@ -32,6 +32,7 @@ namespace ConsoleNorthwind
         public System.Data.Entity.DbSet<Engineer> Engineers { get; set; }
         public System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; }
         public System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; }
+        public System.Data.Entity.DbSet<GeographyType> GeographyTypes { get; set; }
         public System.Data.Entity.DbSet<Invoice> Invoices { get; set; }
         public System.Data.Entity.DbSet<Order> Orders { get; set; }
         public System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; }
@@ -64,6 +65,7 @@ namespace ConsoleNorthwind
             Engineers = new FakeDbSet<Engineer>("EngineerId");
             EngineerOrders = new FakeDbSet<EngineerOrder>("EngineerOrderId");
             EngineerOrderItems = new FakeDbSet<EngineerOrderItem>("EngineerOrderItemId");
+            GeographyTypes = new FakeDbSet<GeographyType>("Id");
             Invoices = new FakeDbSet<Invoice>("CustomerName", "Salesperson", "OrderId", "ShipperName", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
             Orders = new FakeDbSet<Order>("OrderId");
             OrderDetails = new FakeDbSet<OrderDetail>("OrderId", "ProductId");

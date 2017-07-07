@@ -29,6 +29,7 @@ namespace ConsoleNorthwind
         System.Data.Entity.DbSet<Engineer> Engineers { get; set; } // engineer
         System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; } // engineer_order
         System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; } // engineer_order_item
+        System.Data.Entity.DbSet<GeographyType> GeographyTypes { get; set; } // GeographyTypes
         System.Data.Entity.DbSet<Invoice> Invoices { get; set; } // Invoices
         System.Data.Entity.DbSet<Order> Orders { get; set; } // Orders
         System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; } // Order Details
