@@ -21,6 +21,10 @@ namespace ConsoleNorthwind
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
     public class Category
     {
+
+        ///<summary>
+        /// Category Identifier
+        ///</summary>
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"CategoryID", Order = 1, TypeName = "int")]
         [Index(@"PK_Categories", 1, IsUnique = true, IsClustered = true)]
@@ -29,6 +33,9 @@ namespace ConsoleNorthwind
         [Display(Name = "Category ID")]
         public int CategoryId { get; set; } // CategoryID (Primary key)
 
+        ///<summary>
+        /// The category name. Maximum of 15 characters.
+        ///</summary>
         [Column(@"CategoryName", Order = 2, TypeName = "nvarchar")]
         [Index(@"CategoryName", 1, IsUnique = false, IsClustered = false)]
         [Required]
@@ -37,11 +44,17 @@ namespace ConsoleNorthwind
         [Display(Name = "Category name")]
         public string CategoryName { get; set; } // CategoryName (length: 15)
 
+        ///<summary>
+        /// Category description
+        ///</summary>
         [Column(@"Description", Order = 3, TypeName = "ntext")]
         [MaxLength]
         [Display(Name = "Description")]
         public string Description { get; set; } // Description (length: 1073741823)
 
+        ///<summary>
+        /// Category image
+        ///</summary>
         [Column(@"Picture", Order = 4, TypeName = "image")]
         [MaxLength(2147483647)]
         [Display(Name = "Picture")]
