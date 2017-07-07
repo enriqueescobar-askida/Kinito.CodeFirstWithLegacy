@@ -25,6 +25,28 @@
 
                 OrderDetail orderDetail = db.OrderDetails.First();
                 Console.WriteLine(orderDetail.Product.ProductName);
+                Console.WriteLine();
+                var csvToInt = db.CsvToInt("2,4,6,8").Select(x => x.IntValue);
+                foreach (var item in csvToInt)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine();
+                var engineer = new Engineer
+                {
+                    Forename = "Simon",
+                    Surname = "Hughes"
+                };
+                db.Engineers.Add(engineer);
+                db.SaveChanges();
+                var order = new EngineerOrder
+                {
+                    OrderPlaced = DateTime.Now,
+                    Engineer = engineer
+                };
+                db.EngineerOrders.Add(order);
+                db.SaveChanges();
+                Console.ReadLine();
             }
         }
     }

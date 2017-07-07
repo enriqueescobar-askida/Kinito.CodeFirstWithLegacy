@@ -71,6 +71,9 @@
     <Compile Include="CategorySalesFor1997Configuration.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="CsvToIntReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
     <Compile Include="CurrentProductList.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
