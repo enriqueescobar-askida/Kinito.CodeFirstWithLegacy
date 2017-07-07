@@ -279,6 +279,12 @@ namespace ConsoleNorthwind
         }
 
         // Table Valued Functions
+        [System.Data.Entity.DbFunction("NorthwindDbContext", "CsvToInt")]
+        public IQueryable<CsvToIntReturnModel> CsvToInt(string array)
+        {
+            return new System.Collections.Generic.List<CsvToIntReturnModel>().AsQueryable();
+        }
+
     }
 }
 // </auto-generated>

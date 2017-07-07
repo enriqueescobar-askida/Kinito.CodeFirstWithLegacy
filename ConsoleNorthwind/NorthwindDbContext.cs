@@ -100,6 +100,7 @@ namespace ConsoleNorthwind
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Conventions.Add(new CodeFirstStoreFunctions.FunctionsConvention<NorthwindDbContext>("dbo"));
+            modelBuilder.ComplexType<CsvToIntReturnModel>();
 
             modelBuilder.Configurations.Add(new AlphabeticalListOfProductConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
@@ -394,6 +395,15 @@ namespace ConsoleNorthwind
         }
 
         // Table Valued Functions
+        [System.Data.Entity.DbFunction("NorthwindDbContext", "CsvToInt")]
+        [CodeFirstStoreFunctions.DbFunctionDetails(DatabaseSchema = "dbo", ResultColumnName = "IntValue")]
+        public IQueryable<CsvToIntReturnModel> CsvToInt(string array)
+        {
+            var arrayParam = new System.Data.Entity.Core.Objects.ObjectParameter("array", typeof(string)) { Value = array };
+
+            return ((System.Data.Entity.Infrastructure.IObjectContextAdapter)this).ObjectContext.CreateQuery<CsvToIntReturnModel>("[NorthwindDbContext].[CsvToInt](@array)", arrayParam);
+        }
+
     }
 }
 // </auto-generated>

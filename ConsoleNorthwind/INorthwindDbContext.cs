@@ -92,6 +92,7 @@ namespace ConsoleNorthwind
 
 
         // Table Valued Functions
+        System.Linq.IQueryable<CsvToIntReturnModel> CsvToInt(string array);
     }
 
 }
