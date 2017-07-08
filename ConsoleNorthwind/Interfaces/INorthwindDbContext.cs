@@ -13,7 +13,7 @@
 
 namespace ConsoleNorthwind.Interfaces
 {
-    using ConsoleNorthwind.Entities;
+    using Entities;
 
     public interface INorthwindDbContext : System.IDisposable
     {

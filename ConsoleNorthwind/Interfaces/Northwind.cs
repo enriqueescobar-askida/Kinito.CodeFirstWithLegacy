@@ -29,7 +29,7 @@
 
 namespace ConsoleNorthwind.Interfaces
 {
-    using ConsoleNorthwind.Entities;
+    using Entities;
 
 }
 // </auto-generated>

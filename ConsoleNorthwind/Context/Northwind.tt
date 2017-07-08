@@ -124,7 +124,7 @@
     //      UnitOfWorkNamespace = "YourProject.Context";
     //      PocoConfigurationNamespace = "YourProject.Maps";
     // You also need to set the following to the namespace where they now live:
-    PocoNamespace = "ConsoleNorthwind.Entities";
+    PocoNamespace = "Entities";
     ContextNamespace = "ConsoleNorthwind.Context";
     UnitOfWorkNamespace = "ConsoleNorthwind.Interfaces";
     PocoConfigurationNamespace = "ConsoleNorthwind.Configuration";

@@ -14,7 +14,7 @@
 namespace ConsoleNorthwind.Configuration
 {
     using ConsoleNorthwind.Context;
-    using ConsoleNorthwind.Entities;
+    using Entities;
 
     // Territories
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]

@@ -30,7 +30,7 @@
 namespace ConsoleNorthwind.Configuration
 {
     using ConsoleNorthwind.Context;
-    using ConsoleNorthwind.Entities;
+    using Entities;
 
 }
 // </auto-generated>

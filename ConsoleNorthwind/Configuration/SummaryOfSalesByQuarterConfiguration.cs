@@ -14,7 +14,7 @@
 namespace ConsoleNorthwind.Configuration
 {
     using ConsoleNorthwind.Context;
-    using ConsoleNorthwind.Entities;
+    using Entities;
 
     // Summary of Sales by Quarter
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]

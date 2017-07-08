@@ -14,8 +14,8 @@
 namespace ConsoleNorthwind.Context
 {
     using ConsoleNorthwind.Configuration;
-    using ConsoleNorthwind.Entities;
     using ConsoleNorthwind.Interfaces;
+    using Entities;
 
     using System.Linq;
 
