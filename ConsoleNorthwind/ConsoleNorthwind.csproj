@@ -140,6 +140,12 @@
     <Compile Include="FakeNorthwindDbContext.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="GeographyType.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeographyTypeConfiguration.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
     <Compile Include="INorthwindDbContext.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
