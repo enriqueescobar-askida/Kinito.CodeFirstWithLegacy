@@ -162,14 +162,6 @@
     <Compile Include="Context\NorthwindDbContext.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\INorthwindDbContext.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces\Northwind.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -190,10 +182,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Northwind.cs</LastGenOutput>
     </Content>
-    <Content Include="Interfaces\Northwind.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Northwind.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -202,6 +190,10 @@
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{147293a6-27da-42a3-897c-6120586ac3b4}</Project>
       <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{aa6526dd-4660-4c52-9891-2ab0a1cb21c7}</Project>
+      <Name>Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

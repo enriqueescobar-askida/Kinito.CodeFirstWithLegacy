@@ -1,4 +1,4 @@
-﻿<#@ include file="..\EF.Reverse.POCO.Core.ttinclude" #>
+﻿<#@ include file="..\ConsoleNorthwind\EF.Reverse.POCO.Core.ttinclude" #>
 <#
     // v2.31.1
     // Please make changes to the settings below.
@@ -126,7 +126,7 @@
     // You also need to set the following to the namespace where they now live:
     PocoNamespace = "Entities";
     ContextNamespace = "ConsoleNorthwind.Context";
-    UnitOfWorkNamespace = "ConsoleNorthwind.Interfaces";
+    UnitOfWorkNamespace = "Interfaces";
     PocoConfigurationNamespace = "ConsoleNorthwind.Configuration";
 
 
@@ -476,6 +476,6 @@
     if (tables.Count > 0 || storedProcs.Count > 0)
     {
 #>
-<#@ include file="..\EF.Reverse.POCO.ttinclude" #>
+<#@ include file="..\ConsoleNorthwind\EF.Reverse.POCO.ttinclude" #>
 <#@ import namespace="System.Xml.Schema" #>
 <# } #>
