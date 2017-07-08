@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{596043C1-F46
 		1.1_AddNorthwindExtendedProperty.sql = 1.1_AddNorthwindExtendedProperty.sql
 		1.2_CsvToInt.sql = 1.2_CsvToInt.sql
 		1.3_GeographyTypes.sql = 1.3_GeographyTypes.sql
+		2.0_Create-efdemofilter-Database.sql = 2.0_Create-efdemofilter-Database.sql
+		2.1_CreateTables.sql = 2.1_CreateTables.sql
 	EndProjectSection
 EndProject
 Global
