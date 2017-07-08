@@ -2,7 +2,9 @@
 {
     using System;
     using System.Linq;
-     static class Program
+    using Entities;
+    using Context;
+    static class Program
     {
         static void Main()
         {
