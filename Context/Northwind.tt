@@ -1,6 +1,6 @@
-﻿<#@ include file="..\EF.Reverse.POCO.Core.ttinclude" #>
+﻿<#@ include file="EF.Reverse.POCO.Core.ttinclude" #>
 <#
-    // v2.31.1
+    // v2.32.0
     // Please make changes to the settings below.
     // All you have to do is save this file, and the output file(s) is/are generated. Compiling does not regenerate the file(s).
     // A course for this generator is available on Pluralsight at https://www.pluralsight.com/courses/code-first-entity-framework-legacy-databases
@@ -13,7 +13,7 @@
     //ProviderName = "System.Data.SqlClient";
 
     // Namespace = ""; // Override the default namespace here
-    DbContextName = "NorthwindDbContext";
+    DbContextName = "NorthwindDbContext"; // Note: If generating separate files, please give the db context a different name from this tt filename.
     //DbContextInterfaceName = "IMyDbContext"; // Defaults to "I" + DbContextName or set string empty to not implement any interface.
     DbContextInterfaceBaseClasses = "System.IDisposable";    // Specify what the base classes are for your database context interface
     DbContextBaseClass = "System.Data.Entity.DbContext";   // Specify what the base class is for your DbContext. For ASP.NET Identity use "IdentityDbContext<ApplicationUser>"
@@ -38,6 +38,7 @@
     IncludeStoredProcedures = true;
     IncludeTableValuedFunctions = true; // If true, you must set IncludeStoredProcedures = true, and install the "EntityFramework.CodeFirstStoreFunctions" Nuget Package.
     DisableGeographyTypes = false; // Turns off use of System.Data.Entity.Spatial.DbGeography and System.Data.Entity.Spatial.DbGeometry as OData doesn't support entities with geometry/geography types.
+    //CollectionInterfaceType = "System.Collections.Generic.List"; // Determines the declaration type of collections for the Navigation Properties. ICollection is used if not set.
     CollectionType = "System.Collections.Generic.List";  // Determines the type of collection for the Navigation Properties. "ObservableCollection" for example. Add "System.Collections.ObjectModel" to AdditionalNamespaces if setting the CollectionType = "ObservableCollection".
     NullableShortHand = true; //true => T?, false => Nullable<T>
     AddUnitTestingDbContext = true; // Will add a FakeDbContext and FakeDbSet for easy unit testing
@@ -52,6 +53,7 @@
     // If you need to serialize your entities with the JsonSerializer from Newtonsoft, this would serialize
     // all properties including the Reverse Navigation and Foreign Keys. The simplest way to exclude them is
     // to use the data annotation [JsonIgnore] on reverse navigation and foreign keys.
+    // For more control, take a look at ForeignKeyAnnotationsProcessing() further down
     AdditionalReverseNavigationsDataAnnotations = new string[] // Data Annotations for all ReverseNavigationProperty.
     {
         // "JsonIgnore" // Also add "Newtonsoft.Json" to the AdditionalNamespaces array above
@@ -125,9 +127,9 @@
     //      PocoConfigurationNamespace = "YourProject.Maps";
     // You also need to set the following to the namespace where they now live:
     PocoNamespace = "Entities";
-    ContextNamespace = "ConsoleNorthwind.Context";
+    ContextNamespace = "Context";
     UnitOfWorkNamespace = "Interfaces";
-    PocoConfigurationNamespace = "ConsoleNorthwind.Configuration";
+    PocoConfigurationNamespace = "";
 
 
     // Schema *****************************************************************************************************************************
@@ -323,6 +325,18 @@
     {
         //if (t.ClassName == "User")
         //    return ": IdentityUser<int, CustomUserLogin, CustomUserRole, CustomUserClaim>";
+
+        // Or use the maker class to dynamically build more complex definitions
+        /* Example:
+        var r = new BaseClassMaker("POCO.Sample.Data.MetaModelObject");
+        r.AddInterface("POCO.Sample.Data.IObjectWithTableName");
+        r.AddInterface("POCO.Sample.Data.IObjectWithId",
+            t.Columns.Any(x => x.IsPrimaryKey && !x.IsNullable && x.NameHumanCase.Equals("Id", StringComparison.InvariantCultureIgnoreCase) && x.PropertyType == "long"));
+        r.AddInterface("POCO.Sample.Data.IObjectWithUserId",
+            t.Columns.Any(x => !x.IsPrimaryKey && !x.IsNullable && x.NameHumanCase.Equals("UserId", StringComparison.InvariantCultureIgnoreCase) && x.PropertyType == "long"));
+        return r.ToString();
+        */
+
         return "";
     };
 
@@ -458,6 +472,20 @@
         return fkName;
     };
 
+    ForeignKeyAnnotationsProcessing = (Table fkTable, Table pkTable, string propName) =>
+    {
+        /* Example:
+        // Each navigation property that is a reference to User are left intact
+        if (pkTable.NameHumanCase.Equals("User") && propName.Equals("User"))
+            return null;
+
+        // all the others are marked with this attribute
+        return new[] { "System.Runtime.Serialization.IgnoreDataMember" };
+        */
+
+        return null;
+    };
+
     // Return true to include this table in the db context
     ConfigurationFilter = (Table t) =>
     {
@@ -476,6 +504,6 @@
     if (tables.Count > 0 || storedProcs.Count > 0)
     {
 #>
-<#@ include file="..\EF.Reverse.POCO.ttinclude" #>
+<#@ include file="EF.Reverse.POCO.ttinclude" #>
 <#@ import namespace="System.Xml.Schema" #>
 <# } #>

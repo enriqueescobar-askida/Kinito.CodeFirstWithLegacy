@@ -13,7 +13,7 @@
 
 namespace ConsoleNorthwind.Configuration
 {
-    using ConsoleNorthwind.Context;
+    using Context;
     using Entities;
 
     // Product Sales for 1997

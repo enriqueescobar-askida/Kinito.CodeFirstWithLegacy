@@ -127,7 +127,7 @@
     //      PocoConfigurationNamespace = "YourProject.Maps";
     // You also need to set the following to the namespace where they now live:
     PocoNamespace = "Entities";
-    ContextNamespace = "";
+    ContextNamespace = "Context";
     UnitOfWorkNamespace = "Interfaces";
     PocoConfigurationNamespace = "";
 

@@ -13,7 +13,7 @@
 
 namespace ConsoleNorthwind.Configuration
 {
-    using ConsoleNorthwind.Context;
+    using Context;
     using Entities;
 
     // Summary of Sales by Quarter

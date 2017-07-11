@@ -11,15 +11,14 @@
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
 
-namespace ConsoleNorthwind.Context
+namespace Context
 {
-    using ConsoleNorthwind.Configuration;
     using Entities;
     using Interfaces;
 
     using System.Linq;
 
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class FakeNorthwindDbContext : INorthwindDbContext
     {
         public System.Data.Entity.DbSet<AlphabeticalListOfProduct> AlphabeticalListOfProducts { get; set; }

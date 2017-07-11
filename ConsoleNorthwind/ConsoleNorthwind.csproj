@@ -148,20 +148,6 @@
     <Compile Include="Configuration\TerritoryConfiguration.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\FakeDbSet.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\FakeNorthwindDbContext.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\Northwind.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Context\NorthwindDbContext.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -175,10 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configuration\Northwind.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Northwind.cs</LastGenOutput>
-    </Content>
-    <Content Include="Context\Northwind.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Northwind.cs</LastGenOutput>
     </Content>

@@ -27,9 +27,8 @@
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
 
-namespace ConsoleNorthwind.Context
+namespace Context
 {
-    using ConsoleNorthwind.Configuration;
     using Entities;
     using Interfaces;
 
