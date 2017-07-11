@@ -18,7 +18,7 @@ namespace Entities
 
     // Orders
     [Table("Orders", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Order
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -116,10 +116,12 @@ namespace Entities
         /// Parent Customer pointed by [Orders].([CustomerId]) (FK_Orders_Customers)
         /// </summary>
         [ForeignKey("CustomerId")] public virtual Customer Customer { get; set; } // FK_Orders_Customers
+
         /// <summary>
         /// Parent Employee pointed by [Orders].([EmployeeId]) (FK_Orders_Employees)
         /// </summary>
         [ForeignKey("EmployeeId")] public virtual Employee Employee { get; set; } // FK_Orders_Employees
+
         /// <summary>
         /// Parent Shipper pointed by [Orders].([ShipVia]) (FK_Orders_Shippers)
         /// </summary>

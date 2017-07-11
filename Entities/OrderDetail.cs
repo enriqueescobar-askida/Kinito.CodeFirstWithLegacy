@@ -18,7 +18,7 @@ namespace Entities
 
     // Order Details
     [Table("Order Details", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class OrderDetail
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -62,6 +62,7 @@ namespace Entities
         /// Parent Order pointed by [Order Details].([OrderId]) (FK_Order_Details_Orders)
         /// </summary>
         [ForeignKey("OrderId")] public virtual Order Order { get; set; } // FK_Order_Details_Orders
+
         /// <summary>
         /// Parent Product pointed by [Order Details].([ProductId]) (FK_Order_Details_Products)
         /// </summary>

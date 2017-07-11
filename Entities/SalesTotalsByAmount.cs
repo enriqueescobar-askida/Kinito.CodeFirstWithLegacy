@@ -18,7 +18,7 @@ namespace Entities
 
     // Sales Totals by Amount
     [Table("Sales Totals by Amount", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class SalesTotalsByAmount
     {
         [Column(@"SaleAmount", Order = 1, TypeName = "money")]

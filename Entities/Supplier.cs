@@ -18,7 +18,7 @@ namespace Entities
 
     // Suppliers
     [Table("Suppliers", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Supplier
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

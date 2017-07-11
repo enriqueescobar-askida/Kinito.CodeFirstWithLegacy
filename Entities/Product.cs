@@ -18,7 +18,7 @@ namespace Entities
 
     // Products
     [Table("Products", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Product
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -89,6 +89,7 @@ namespace Entities
         /// Parent Category pointed by [Products].([CategoryId]) (FK_Products_Categories)
         /// </summary>
         [ForeignKey("CategoryId")] public virtual Category Category { get; set; } // FK_Products_Categories
+
         /// <summary>
         /// Parent Supplier pointed by [Products].([SupplierId]) (FK_Products_Suppliers)
         /// </summary>

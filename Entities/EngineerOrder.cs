@@ -18,7 +18,7 @@ namespace Entities
 
     // engineer_order
     [Table("engineer_order", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class EngineerOrder
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

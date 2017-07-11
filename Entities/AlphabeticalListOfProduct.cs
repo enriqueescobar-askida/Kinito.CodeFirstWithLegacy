@@ -18,7 +18,7 @@ namespace Entities
 
     // Alphabetical list of products
     [Table("Alphabetical list of products", Schema = "dbo")]
-    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.31.1.0")]
+    [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class AlphabeticalListOfProduct
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
