@@ -16,19 +16,18 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Order Details Extended
+    // Products Above Average Price
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class OrderDetailsExtendedConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OrderDetailsExtended>
+    public class ViewProductsAboveAveragePriceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewProductsAboveAveragePrice>
     {
-        public OrderDetailsExtendedConfiguration()
+        public ViewProductsAboveAveragePriceConfiguration()
             : this("dbo")
         {
         }
 
-        public OrderDetailsExtendedConfiguration(string schema)
+        public ViewProductsAboveAveragePriceConfiguration(string schema)
         {
-            Property(x => x.UnitPrice).HasPrecision(19,4);
-            Property(x => x.ExtendedPrice).IsOptional().HasPrecision(19,4);
+            Property(x => x.UnitPrice).IsOptional().HasPrecision(19,4);
         }
     }
 

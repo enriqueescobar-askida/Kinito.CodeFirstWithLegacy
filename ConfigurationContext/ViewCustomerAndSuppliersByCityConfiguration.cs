@@ -16,19 +16,20 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Sales Totals by Amount
+    // Customer and Suppliers by City
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class SalesTotalsByAmountConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SalesTotalsByAmount>
+    public class ViewCustomerAndSuppliersByCityConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewCustomerAndSuppliersByCity>
     {
-        public SalesTotalsByAmountConfiguration()
+        public ViewCustomerAndSuppliersByCityConfiguration()
             : this("dbo")
         {
         }
 
-        public SalesTotalsByAmountConfiguration(string schema)
+        public ViewCustomerAndSuppliersByCityConfiguration(string schema)
         {
-            Property(x => x.SaleAmount).IsOptional().HasPrecision(19,4);
-            Property(x => x.ShippedDate).IsOptional();
+            Property(x => x.City).IsOptional();
+            Property(x => x.ContactName).IsOptional();
+            Property(x => x.Relationship).IsUnicode(false);
         }
     }
 

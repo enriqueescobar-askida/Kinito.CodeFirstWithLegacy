@@ -21,69 +21,69 @@ namespace ConfigurationContext
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class FakeNorthwindDbContext : INorthwindDbContext
     {
-        public System.Data.Entity.DbSet<AlphabeticalListOfProduct> AlphabeticalListOfProducts { get; set; }
         public System.Data.Entity.DbSet<Category> Categories { get; set; }
-        public System.Data.Entity.DbSet<CategorySalesFor1997> CategorySalesFor1997 { get; set; }
-        public System.Data.Entity.DbSet<CurrentProductList> CurrentProductLists { get; set; }
         public System.Data.Entity.DbSet<Customer> Customers { get; set; }
-        public System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; }
         public System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; }
         public System.Data.Entity.DbSet<Employee> Employees { get; set; }
         public System.Data.Entity.DbSet<Engineer> Engineers { get; set; }
         public System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; }
         public System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; }
         public System.Data.Entity.DbSet<GeographyType> GeographyTypes { get; set; }
-        public System.Data.Entity.DbSet<Invoice> Invoices { get; set; }
         public System.Data.Entity.DbSet<Order> Orders { get; set; }
         public System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; }
-        public System.Data.Entity.DbSet<OrderDetailsExtended> OrderDetailsExtendeds { get; set; }
-        public System.Data.Entity.DbSet<OrdersQry> OrdersQries { get; set; }
-        public System.Data.Entity.DbSet<OrderSubtotal> OrderSubtotals { get; set; }
         public System.Data.Entity.DbSet<Product> Products { get; set; }
-        public System.Data.Entity.DbSet<ProductsAboveAveragePrice> ProductsAboveAveragePrices { get; set; }
-        public System.Data.Entity.DbSet<ProductSalesFor1997> ProductSalesFor1997 { get; set; }
-        public System.Data.Entity.DbSet<ProductsByCategory> ProductsByCategories { get; set; }
         public System.Data.Entity.DbSet<Region> Regions { get; set; }
-        public System.Data.Entity.DbSet<SalesByCategory> SalesByCategories { get; set; }
-        public System.Data.Entity.DbSet<SalesTotalsByAmount> SalesTotalsByAmounts { get; set; }
         public System.Data.Entity.DbSet<Shipper> Shippers { get; set; }
-        public System.Data.Entity.DbSet<SummaryOfSalesByQuarter> SummaryOfSalesByQuarters { get; set; }
-        public System.Data.Entity.DbSet<SummaryOfSalesByYear> SummaryOfSalesByYears { get; set; }
         public System.Data.Entity.DbSet<Supplier> Suppliers { get; set; }
         public System.Data.Entity.DbSet<Territory> Territories { get; set; }
+        public System.Data.Entity.DbSet<ViewAlphabeticalListOfProduct> ViewAlphabeticalListOfProducts { get; set; }
+        public System.Data.Entity.DbSet<ViewCategorySalesFor1997> ViewCategorySalesFor1997 { get; set; }
+        public System.Data.Entity.DbSet<ViewCurrentProductList> ViewCurrentProductLists { get; set; }
+        public System.Data.Entity.DbSet<ViewCustomerAndSuppliersByCity> ViewCustomerAndSuppliersByCities { get; set; }
+        public System.Data.Entity.DbSet<ViewInvoice> ViewInvoices { get; set; }
+        public System.Data.Entity.DbSet<ViewOrderDetailsExtended> ViewOrderDetailsExtendeds { get; set; }
+        public System.Data.Entity.DbSet<ViewOrdersQry> ViewOrdersQries { get; set; }
+        public System.Data.Entity.DbSet<ViewOrderSubtotal> ViewOrderSubtotals { get; set; }
+        public System.Data.Entity.DbSet<ViewProductsAboveAveragePrice> ViewProductsAboveAveragePrices { get; set; }
+        public System.Data.Entity.DbSet<ViewProductSalesFor1997> ViewProductSalesFor1997 { get; set; }
+        public System.Data.Entity.DbSet<ViewProductsByCategory> ViewProductsByCategories { get; set; }
+        public System.Data.Entity.DbSet<ViewSalesByCategory> ViewSalesByCategories { get; set; }
+        public System.Data.Entity.DbSet<ViewSalesTotalsByAmount> ViewSalesTotalsByAmounts { get; set; }
+        public System.Data.Entity.DbSet<ViewSummaryOfSalesByQuarter> ViewSummaryOfSalesByQuarters { get; set; }
+        public System.Data.Entity.DbSet<ViewSummaryOfSalesByYear> ViewSummaryOfSalesByYears { get; set; }
 
         public FakeNorthwindDbContext()
         {
-            AlphabeticalListOfProducts = new FakeDbSet<AlphabeticalListOfProduct>("ProductId", "ProductName", "Discontinued", "CategoryName");
             Categories = new FakeDbSet<Category>("CategoryId");
-            CategorySalesFor1997 = new FakeDbSet<CategorySalesFor1997>("CategoryName");
-            CurrentProductLists = new FakeDbSet<CurrentProductList>("ProductId", "ProductName");
             Customers = new FakeDbSet<Customer>("CustomerId");
-            CustomerAndSuppliersByCities = new FakeDbSet<CustomerAndSuppliersByCity>("CompanyName", "Relationship");
             CustomerDemographics = new FakeDbSet<CustomerDemographic>("CustomerTypeId");
             Employees = new FakeDbSet<Employee>("EmployeeId");
             Engineers = new FakeDbSet<Engineer>("EngineerId");
             EngineerOrders = new FakeDbSet<EngineerOrder>("EngineerOrderId");
             EngineerOrderItems = new FakeDbSet<EngineerOrderItem>("EngineerOrderItemId");
             GeographyTypes = new FakeDbSet<GeographyType>("Id");
-            Invoices = new FakeDbSet<Invoice>("CustomerName", "Salesperson", "OrderId", "ShipperName", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
             Orders = new FakeDbSet<Order>("OrderId");
             OrderDetails = new FakeDbSet<OrderDetail>("OrderId", "ProductId");
-            OrderDetailsExtendeds = new FakeDbSet<OrderDetailsExtended>("OrderId", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
-            OrdersQries = new FakeDbSet<OrdersQry>("OrderId", "CompanyName");
-            OrderSubtotals = new FakeDbSet<OrderSubtotal>("OrderId");
             Products = new FakeDbSet<Product>("ProductId");
-            ProductsAboveAveragePrices = new FakeDbSet<ProductsAboveAveragePrice>("ProductName");
-            ProductSalesFor1997 = new FakeDbSet<ProductSalesFor1997>("CategoryName", "ProductName");
-            ProductsByCategories = new FakeDbSet<ProductsByCategory>("CategoryName", "ProductName", "Discontinued");
             Regions = new FakeDbSet<Region>("RegionId");
-            SalesByCategories = new FakeDbSet<SalesByCategory>("CategoryId", "CategoryName", "ProductName");
-            SalesTotalsByAmounts = new FakeDbSet<SalesTotalsByAmount>("OrderId", "CompanyName");
             Shippers = new FakeDbSet<Shipper>("ShipperId");
-            SummaryOfSalesByQuarters = new FakeDbSet<SummaryOfSalesByQuarter>("OrderId");
-            SummaryOfSalesByYears = new FakeDbSet<SummaryOfSalesByYear>("OrderId");
             Suppliers = new FakeDbSet<Supplier>("SupplierId");
             Territories = new FakeDbSet<Territory>("TerritoryId");
+            ViewAlphabeticalListOfProducts = new FakeDbSet<ViewAlphabeticalListOfProduct>("ProductId", "ProductName", "Discontinued", "CategoryName");
+            ViewCategorySalesFor1997 = new FakeDbSet<ViewCategorySalesFor1997>("CategoryName");
+            ViewCurrentProductLists = new FakeDbSet<ViewCurrentProductList>("ProductId", "ProductName");
+            ViewCustomerAndSuppliersByCities = new FakeDbSet<ViewCustomerAndSuppliersByCity>("CompanyName", "Relationship");
+            ViewInvoices = new FakeDbSet<ViewInvoice>("CustomerName", "Salesperson", "OrderId", "ShipperName", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
+            ViewOrderDetailsExtendeds = new FakeDbSet<ViewOrderDetailsExtended>("OrderId", "ProductId", "ProductName", "UnitPrice", "Quantity", "Discount");
+            ViewOrdersQries = new FakeDbSet<ViewOrdersQry>("OrderId", "CompanyName");
+            ViewOrderSubtotals = new FakeDbSet<ViewOrderSubtotal>("OrderId");
+            ViewProductsAboveAveragePrices = new FakeDbSet<ViewProductsAboveAveragePrice>("ProductName");
+            ViewProductSalesFor1997 = new FakeDbSet<ViewProductSalesFor1997>("CategoryName", "ProductName");
+            ViewProductsByCategories = new FakeDbSet<ViewProductsByCategory>("CategoryName", "ProductName", "Discontinued");
+            ViewSalesByCategories = new FakeDbSet<ViewSalesByCategory>("CategoryId", "CategoryName", "ProductName");
+            ViewSalesTotalsByAmounts = new FakeDbSet<ViewSalesTotalsByAmount>("OrderId", "CompanyName");
+            ViewSummaryOfSalesByQuarters = new FakeDbSet<ViewSummaryOfSalesByQuarter>("OrderId");
+            ViewSummaryOfSalesByYears = new FakeDbSet<ViewSummaryOfSalesByYear>("OrderId");
         }
 
         public int SaveChangesCount { get; private set; }

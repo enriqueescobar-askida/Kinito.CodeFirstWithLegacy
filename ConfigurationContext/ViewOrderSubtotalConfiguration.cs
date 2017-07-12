@@ -16,18 +16,18 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Product Sales for 1997
+    // Order Subtotals
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProductSalesFor1997Configuration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ProductSalesFor1997>
+    public class ViewOrderSubtotalConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewOrderSubtotal>
     {
-        public ProductSalesFor1997Configuration()
+        public ViewOrderSubtotalConfiguration()
             : this("dbo")
         {
         }
 
-        public ProductSalesFor1997Configuration(string schema)
+        public ViewOrderSubtotalConfiguration(string schema)
         {
-            Property(x => x.ProductSales).IsOptional().HasPrecision(19,4);
+            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 

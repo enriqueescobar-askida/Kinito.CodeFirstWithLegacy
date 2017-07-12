@@ -16,17 +16,18 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Current Product List
+    // Product Sales for 1997
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CurrentProductListConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<CurrentProductList>
+    public class ViewProductSalesFor1997Configuration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewProductSalesFor1997>
     {
-        public CurrentProductListConfiguration()
+        public ViewProductSalesFor1997Configuration()
             : this("dbo")
         {
         }
 
-        public CurrentProductListConfiguration(string schema)
+        public ViewProductSalesFor1997Configuration(string schema)
         {
+            Property(x => x.ProductSales).IsOptional().HasPrecision(19,4);
         }
     }
 

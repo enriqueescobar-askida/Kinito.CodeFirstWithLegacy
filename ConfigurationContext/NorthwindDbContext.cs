@@ -21,36 +21,36 @@ namespace ConfigurationContext
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class NorthwindDbContext : System.Data.Entity.DbContext, INorthwindDbContext
     {
-        public System.Data.Entity.DbSet<AlphabeticalListOfProduct> AlphabeticalListOfProducts { get; set; } // Alphabetical list of products
         public System.Data.Entity.DbSet<Category> Categories { get; set; } // Categories
-        public System.Data.Entity.DbSet<CategorySalesFor1997> CategorySalesFor1997 { get; set; } // Category Sales for 1997
-        public System.Data.Entity.DbSet<CurrentProductList> CurrentProductLists { get; set; } // Current Product List
         public System.Data.Entity.DbSet<Customer> Customers { get; set; } // Customers
-        public System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
         public System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; } // CustomerDemographics
         public System.Data.Entity.DbSet<Employee> Employees { get; set; } // Employees
         public System.Data.Entity.DbSet<Engineer> Engineers { get; set; } // engineer
         public System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; } // engineer_order
         public System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; } // engineer_order_item
         public System.Data.Entity.DbSet<GeographyType> GeographyTypes { get; set; } // GeographyTypes
-        public System.Data.Entity.DbSet<Invoice> Invoices { get; set; } // Invoices
         public System.Data.Entity.DbSet<Order> Orders { get; set; } // Orders
         public System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; } // Order Details
-        public System.Data.Entity.DbSet<OrderDetailsExtended> OrderDetailsExtendeds { get; set; } // Order Details Extended
-        public System.Data.Entity.DbSet<OrdersQry> OrdersQries { get; set; } // Orders Qry
-        public System.Data.Entity.DbSet<OrderSubtotal> OrderSubtotals { get; set; } // Order Subtotals
         public System.Data.Entity.DbSet<Product> Products { get; set; } // Products
-        public System.Data.Entity.DbSet<ProductsAboveAveragePrice> ProductsAboveAveragePrices { get; set; } // Products Above Average Price
-        public System.Data.Entity.DbSet<ProductSalesFor1997> ProductSalesFor1997 { get; set; } // Product Sales for 1997
-        public System.Data.Entity.DbSet<ProductsByCategory> ProductsByCategories { get; set; } // Products by Category
         public System.Data.Entity.DbSet<Region> Regions { get; set; } // Region
-        public System.Data.Entity.DbSet<SalesByCategory> SalesByCategories { get; set; } // Sales by Category
-        public System.Data.Entity.DbSet<SalesTotalsByAmount> SalesTotalsByAmounts { get; set; } // Sales Totals by Amount
         public System.Data.Entity.DbSet<Shipper> Shippers { get; set; } // Shippers
-        public System.Data.Entity.DbSet<SummaryOfSalesByQuarter> SummaryOfSalesByQuarters { get; set; } // Summary of Sales by Quarter
-        public System.Data.Entity.DbSet<SummaryOfSalesByYear> SummaryOfSalesByYears { get; set; } // Summary of Sales by Year
         public System.Data.Entity.DbSet<Supplier> Suppliers { get; set; } // Suppliers
         public System.Data.Entity.DbSet<Territory> Territories { get; set; } // Territories
+        public System.Data.Entity.DbSet<ViewAlphabeticalListOfProduct> ViewAlphabeticalListOfProducts { get; set; } // Alphabetical list of products
+        public System.Data.Entity.DbSet<ViewCategorySalesFor1997> ViewCategorySalesFor1997 { get; set; } // Category Sales for 1997
+        public System.Data.Entity.DbSet<ViewCurrentProductList> ViewCurrentProductLists { get; set; } // Current Product List
+        public System.Data.Entity.DbSet<ViewCustomerAndSuppliersByCity> ViewCustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
+        public System.Data.Entity.DbSet<ViewInvoice> ViewInvoices { get; set; } // Invoices
+        public System.Data.Entity.DbSet<ViewOrderDetailsExtended> ViewOrderDetailsExtendeds { get; set; } // Order Details Extended
+        public System.Data.Entity.DbSet<ViewOrdersQry> ViewOrdersQries { get; set; } // Orders Qry
+        public System.Data.Entity.DbSet<ViewOrderSubtotal> ViewOrderSubtotals { get; set; } // Order Subtotals
+        public System.Data.Entity.DbSet<ViewProductsAboveAveragePrice> ViewProductsAboveAveragePrices { get; set; } // Products Above Average Price
+        public System.Data.Entity.DbSet<ViewProductSalesFor1997> ViewProductSalesFor1997 { get; set; } // Product Sales for 1997
+        public System.Data.Entity.DbSet<ViewProductsByCategory> ViewProductsByCategories { get; set; } // Products by Category
+        public System.Data.Entity.DbSet<ViewSalesByCategory> ViewSalesByCategories { get; set; } // Sales by Category
+        public System.Data.Entity.DbSet<ViewSalesTotalsByAmount> ViewSalesTotalsByAmounts { get; set; } // Sales Totals by Amount
+        public System.Data.Entity.DbSet<ViewSummaryOfSalesByQuarter> ViewSummaryOfSalesByQuarters { get; set; } // Summary of Sales by Quarter
+        public System.Data.Entity.DbSet<ViewSummaryOfSalesByYear> ViewSummaryOfSalesByYears { get; set; } // Summary of Sales by Year
 
         static NorthwindDbContext()
         {
@@ -103,70 +103,70 @@ namespace ConfigurationContext
             modelBuilder.Conventions.Add(new CodeFirstStoreFunctions.FunctionsConvention<NorthwindDbContext>("dbo"));
             modelBuilder.ComplexType<CsvToIntReturnModel>();
 
-            modelBuilder.Configurations.Add(new AlphabeticalListOfProductConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
-            modelBuilder.Configurations.Add(new CategorySalesFor1997Configuration());
-            modelBuilder.Configurations.Add(new CurrentProductListConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
-            modelBuilder.Configurations.Add(new CustomerAndSuppliersByCityConfiguration());
             modelBuilder.Configurations.Add(new CustomerDemographicConfiguration());
             modelBuilder.Configurations.Add(new EmployeeConfiguration());
             modelBuilder.Configurations.Add(new EngineerConfiguration());
             modelBuilder.Configurations.Add(new EngineerOrderConfiguration());
             modelBuilder.Configurations.Add(new EngineerOrderItemConfiguration());
             modelBuilder.Configurations.Add(new GeographyTypeConfiguration());
-            modelBuilder.Configurations.Add(new InvoiceConfiguration());
             modelBuilder.Configurations.Add(new OrderConfiguration());
             modelBuilder.Configurations.Add(new OrderDetailConfiguration());
-            modelBuilder.Configurations.Add(new OrderDetailsExtendedConfiguration());
-            modelBuilder.Configurations.Add(new OrdersQryConfiguration());
-            modelBuilder.Configurations.Add(new OrderSubtotalConfiguration());
             modelBuilder.Configurations.Add(new ProductConfiguration());
-            modelBuilder.Configurations.Add(new ProductsAboveAveragePriceConfiguration());
-            modelBuilder.Configurations.Add(new ProductSalesFor1997Configuration());
-            modelBuilder.Configurations.Add(new ProductsByCategoryConfiguration());
             modelBuilder.Configurations.Add(new RegionConfiguration());
-            modelBuilder.Configurations.Add(new SalesByCategoryConfiguration());
-            modelBuilder.Configurations.Add(new SalesTotalsByAmountConfiguration());
             modelBuilder.Configurations.Add(new ShipperConfiguration());
-            modelBuilder.Configurations.Add(new SummaryOfSalesByQuarterConfiguration());
-            modelBuilder.Configurations.Add(new SummaryOfSalesByYearConfiguration());
             modelBuilder.Configurations.Add(new SupplierConfiguration());
             modelBuilder.Configurations.Add(new TerritoryConfiguration());
+            modelBuilder.Configurations.Add(new ViewAlphabeticalListOfProductConfiguration());
+            modelBuilder.Configurations.Add(new ViewCategorySalesFor1997Configuration());
+            modelBuilder.Configurations.Add(new ViewCurrentProductListConfiguration());
+            modelBuilder.Configurations.Add(new ViewCustomerAndSuppliersByCityConfiguration());
+            modelBuilder.Configurations.Add(new ViewInvoiceConfiguration());
+            modelBuilder.Configurations.Add(new ViewOrderDetailsExtendedConfiguration());
+            modelBuilder.Configurations.Add(new ViewOrdersQryConfiguration());
+            modelBuilder.Configurations.Add(new ViewOrderSubtotalConfiguration());
+            modelBuilder.Configurations.Add(new ViewProductsAboveAveragePriceConfiguration());
+            modelBuilder.Configurations.Add(new ViewProductSalesFor1997Configuration());
+            modelBuilder.Configurations.Add(new ViewProductsByCategoryConfiguration());
+            modelBuilder.Configurations.Add(new ViewSalesByCategoryConfiguration());
+            modelBuilder.Configurations.Add(new ViewSalesTotalsByAmountConfiguration());
+            modelBuilder.Configurations.Add(new ViewSummaryOfSalesByQuarterConfiguration());
+            modelBuilder.Configurations.Add(new ViewSummaryOfSalesByYearConfiguration());
         }
 
         public static System.Data.Entity.DbModelBuilder CreateModel(System.Data.Entity.DbModelBuilder modelBuilder, string schema)
         {
-            modelBuilder.Configurations.Add(new AlphabeticalListOfProductConfiguration(schema));
             modelBuilder.Configurations.Add(new CategoryConfiguration(schema));
-            modelBuilder.Configurations.Add(new CategorySalesFor1997Configuration(schema));
-            modelBuilder.Configurations.Add(new CurrentProductListConfiguration(schema));
             modelBuilder.Configurations.Add(new CustomerConfiguration(schema));
-            modelBuilder.Configurations.Add(new CustomerAndSuppliersByCityConfiguration(schema));
             modelBuilder.Configurations.Add(new CustomerDemographicConfiguration(schema));
             modelBuilder.Configurations.Add(new EmployeeConfiguration(schema));
             modelBuilder.Configurations.Add(new EngineerConfiguration(schema));
             modelBuilder.Configurations.Add(new EngineerOrderConfiguration(schema));
             modelBuilder.Configurations.Add(new EngineerOrderItemConfiguration(schema));
             modelBuilder.Configurations.Add(new GeographyTypeConfiguration(schema));
-            modelBuilder.Configurations.Add(new InvoiceConfiguration(schema));
             modelBuilder.Configurations.Add(new OrderConfiguration(schema));
             modelBuilder.Configurations.Add(new OrderDetailConfiguration(schema));
-            modelBuilder.Configurations.Add(new OrderDetailsExtendedConfiguration(schema));
-            modelBuilder.Configurations.Add(new OrdersQryConfiguration(schema));
-            modelBuilder.Configurations.Add(new OrderSubtotalConfiguration(schema));
             modelBuilder.Configurations.Add(new ProductConfiguration(schema));
-            modelBuilder.Configurations.Add(new ProductsAboveAveragePriceConfiguration(schema));
-            modelBuilder.Configurations.Add(new ProductSalesFor1997Configuration(schema));
-            modelBuilder.Configurations.Add(new ProductsByCategoryConfiguration(schema));
             modelBuilder.Configurations.Add(new RegionConfiguration(schema));
-            modelBuilder.Configurations.Add(new SalesByCategoryConfiguration(schema));
-            modelBuilder.Configurations.Add(new SalesTotalsByAmountConfiguration(schema));
             modelBuilder.Configurations.Add(new ShipperConfiguration(schema));
-            modelBuilder.Configurations.Add(new SummaryOfSalesByQuarterConfiguration(schema));
-            modelBuilder.Configurations.Add(new SummaryOfSalesByYearConfiguration(schema));
             modelBuilder.Configurations.Add(new SupplierConfiguration(schema));
             modelBuilder.Configurations.Add(new TerritoryConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewAlphabeticalListOfProductConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewCategorySalesFor1997Configuration(schema));
+            modelBuilder.Configurations.Add(new ViewCurrentProductListConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewCustomerAndSuppliersByCityConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewInvoiceConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewOrderDetailsExtendedConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewOrdersQryConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewOrderSubtotalConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewProductsAboveAveragePriceConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewProductSalesFor1997Configuration(schema));
+            modelBuilder.Configurations.Add(new ViewProductsByCategoryConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewSalesByCategoryConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewSalesTotalsByAmountConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewSummaryOfSalesByQuarterConfiguration(schema));
+            modelBuilder.Configurations.Add(new ViewSummaryOfSalesByYearConfiguration(schema));
             return modelBuilder;
         }
 

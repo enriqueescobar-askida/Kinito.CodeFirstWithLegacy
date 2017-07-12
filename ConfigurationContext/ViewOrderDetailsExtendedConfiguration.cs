@@ -16,19 +16,19 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Products by Category
+    // Order Details Extended
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProductsByCategoryConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ProductsByCategory>
+    public class ViewOrderDetailsExtendedConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewOrderDetailsExtended>
     {
-        public ProductsByCategoryConfiguration()
+        public ViewOrderDetailsExtendedConfiguration()
             : this("dbo")
         {
         }
 
-        public ProductsByCategoryConfiguration(string schema)
+        public ViewOrderDetailsExtendedConfiguration(string schema)
         {
-            Property(x => x.QuantityPerUnit).IsOptional();
-            Property(x => x.UnitsInStock).IsOptional();
+            Property(x => x.UnitPrice).HasPrecision(19,4);
+            Property(x => x.ExtendedPrice).IsOptional().HasPrecision(19,4);
         }
     }
 

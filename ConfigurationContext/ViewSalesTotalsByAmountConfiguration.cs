@@ -16,19 +16,19 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Summary of Sales by Quarter
+    // Sales Totals by Amount
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class SummaryOfSalesByQuarterConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SummaryOfSalesByQuarter>
+    public class ViewSalesTotalsByAmountConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewSalesTotalsByAmount>
     {
-        public SummaryOfSalesByQuarterConfiguration()
+        public ViewSalesTotalsByAmountConfiguration()
             : this("dbo")
         {
         }
 
-        public SummaryOfSalesByQuarterConfiguration(string schema)
+        public ViewSalesTotalsByAmountConfiguration(string schema)
         {
+            Property(x => x.SaleAmount).IsOptional().HasPrecision(19,4);
             Property(x => x.ShippedDate).IsOptional();
-            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 

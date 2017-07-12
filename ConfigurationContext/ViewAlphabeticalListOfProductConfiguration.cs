@@ -18,14 +18,14 @@ namespace ConfigurationContext
 
     // Alphabetical list of products
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class AlphabeticalListOfProductConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<AlphabeticalListOfProduct>
+    public class ViewAlphabeticalListOfProductConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewAlphabeticalListOfProduct>
     {
-        public AlphabeticalListOfProductConfiguration()
+        public ViewAlphabeticalListOfProductConfiguration()
             : this("dbo")
         {
         }
 
-        public AlphabeticalListOfProductConfiguration(string schema)
+        public ViewAlphabeticalListOfProductConfiguration(string schema)
         {
             Property(x => x.SupplierId).IsOptional();
             Property(x => x.CategoryId).IsOptional();

@@ -16,18 +16,17 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Order Subtotals
+    // Current Product List
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class OrderSubtotalConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OrderSubtotal>
+    public class ViewCurrentProductListConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewCurrentProductList>
     {
-        public OrderSubtotalConfiguration()
+        public ViewCurrentProductListConfiguration()
             : this("dbo")
         {
         }
 
-        public OrderSubtotalConfiguration(string schema)
+        public ViewCurrentProductListConfiguration(string schema)
         {
-            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 

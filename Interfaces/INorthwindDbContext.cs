@@ -17,36 +17,36 @@ namespace Interfaces
 
     public interface INorthwindDbContext : System.IDisposable
     {
-        System.Data.Entity.DbSet<AlphabeticalListOfProduct> AlphabeticalListOfProducts { get; set; } // Alphabetical list of products
         System.Data.Entity.DbSet<Category> Categories { get; set; } // Categories
-        System.Data.Entity.DbSet<CategorySalesFor1997> CategorySalesFor1997 { get; set; } // Category Sales for 1997
-        System.Data.Entity.DbSet<CurrentProductList> CurrentProductLists { get; set; } // Current Product List
         System.Data.Entity.DbSet<Customer> Customers { get; set; } // Customers
-        System.Data.Entity.DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
         System.Data.Entity.DbSet<CustomerDemographic> CustomerDemographics { get; set; } // CustomerDemographics
         System.Data.Entity.DbSet<Employee> Employees { get; set; } // Employees
         System.Data.Entity.DbSet<Engineer> Engineers { get; set; } // engineer
         System.Data.Entity.DbSet<EngineerOrder> EngineerOrders { get; set; } // engineer_order
         System.Data.Entity.DbSet<EngineerOrderItem> EngineerOrderItems { get; set; } // engineer_order_item
         System.Data.Entity.DbSet<GeographyType> GeographyTypes { get; set; } // GeographyTypes
-        System.Data.Entity.DbSet<Invoice> Invoices { get; set; } // Invoices
         System.Data.Entity.DbSet<Order> Orders { get; set; } // Orders
         System.Data.Entity.DbSet<OrderDetail> OrderDetails { get; set; } // Order Details
-        System.Data.Entity.DbSet<OrderDetailsExtended> OrderDetailsExtendeds { get; set; } // Order Details Extended
-        System.Data.Entity.DbSet<OrdersQry> OrdersQries { get; set; } // Orders Qry
-        System.Data.Entity.DbSet<OrderSubtotal> OrderSubtotals { get; set; } // Order Subtotals
         System.Data.Entity.DbSet<Product> Products { get; set; } // Products
-        System.Data.Entity.DbSet<ProductsAboveAveragePrice> ProductsAboveAveragePrices { get; set; } // Products Above Average Price
-        System.Data.Entity.DbSet<ProductSalesFor1997> ProductSalesFor1997 { get; set; } // Product Sales for 1997
-        System.Data.Entity.DbSet<ProductsByCategory> ProductsByCategories { get; set; } // Products by Category
         System.Data.Entity.DbSet<Region> Regions { get; set; } // Region
-        System.Data.Entity.DbSet<SalesByCategory> SalesByCategories { get; set; } // Sales by Category
-        System.Data.Entity.DbSet<SalesTotalsByAmount> SalesTotalsByAmounts { get; set; } // Sales Totals by Amount
         System.Data.Entity.DbSet<Shipper> Shippers { get; set; } // Shippers
-        System.Data.Entity.DbSet<SummaryOfSalesByQuarter> SummaryOfSalesByQuarters { get; set; } // Summary of Sales by Quarter
-        System.Data.Entity.DbSet<SummaryOfSalesByYear> SummaryOfSalesByYears { get; set; } // Summary of Sales by Year
         System.Data.Entity.DbSet<Supplier> Suppliers { get; set; } // Suppliers
         System.Data.Entity.DbSet<Territory> Territories { get; set; } // Territories
+        System.Data.Entity.DbSet<ViewAlphabeticalListOfProduct> ViewAlphabeticalListOfProducts { get; set; } // Alphabetical list of products
+        System.Data.Entity.DbSet<ViewCategorySalesFor1997> ViewCategorySalesFor1997 { get; set; } // Category Sales for 1997
+        System.Data.Entity.DbSet<ViewCurrentProductList> ViewCurrentProductLists { get; set; } // Current Product List
+        System.Data.Entity.DbSet<ViewCustomerAndSuppliersByCity> ViewCustomerAndSuppliersByCities { get; set; } // Customer and Suppliers by City
+        System.Data.Entity.DbSet<ViewInvoice> ViewInvoices { get; set; } // Invoices
+        System.Data.Entity.DbSet<ViewOrderDetailsExtended> ViewOrderDetailsExtendeds { get; set; } // Order Details Extended
+        System.Data.Entity.DbSet<ViewOrdersQry> ViewOrdersQries { get; set; } // Orders Qry
+        System.Data.Entity.DbSet<ViewOrderSubtotal> ViewOrderSubtotals { get; set; } // Order Subtotals
+        System.Data.Entity.DbSet<ViewProductsAboveAveragePrice> ViewProductsAboveAveragePrices { get; set; } // Products Above Average Price
+        System.Data.Entity.DbSet<ViewProductSalesFor1997> ViewProductSalesFor1997 { get; set; } // Product Sales for 1997
+        System.Data.Entity.DbSet<ViewProductsByCategory> ViewProductsByCategories { get; set; } // Products by Category
+        System.Data.Entity.DbSet<ViewSalesByCategory> ViewSalesByCategories { get; set; } // Sales by Category
+        System.Data.Entity.DbSet<ViewSalesTotalsByAmount> ViewSalesTotalsByAmounts { get; set; } // Sales Totals by Amount
+        System.Data.Entity.DbSet<ViewSummaryOfSalesByQuarter> ViewSummaryOfSalesByQuarters { get; set; } // Summary of Sales by Quarter
+        System.Data.Entity.DbSet<ViewSummaryOfSalesByYear> ViewSummaryOfSalesByYears { get; set; } // Summary of Sales by Year
 
         int SaveChanges();
         System.Threading.Tasks.Task<int> SaveChangesAsync();

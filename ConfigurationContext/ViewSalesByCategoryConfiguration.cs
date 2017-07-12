@@ -16,20 +16,18 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Customer and Suppliers by City
+    // Sales by Category
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CustomerAndSuppliersByCityConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<CustomerAndSuppliersByCity>
+    public class ViewSalesByCategoryConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewSalesByCategory>
     {
-        public CustomerAndSuppliersByCityConfiguration()
+        public ViewSalesByCategoryConfiguration()
             : this("dbo")
         {
         }
 
-        public CustomerAndSuppliersByCityConfiguration(string schema)
+        public ViewSalesByCategoryConfiguration(string schema)
         {
-            Property(x => x.City).IsOptional();
-            Property(x => x.ContactName).IsOptional();
-            Property(x => x.Relationship).IsUnicode(false);
+            Property(x => x.ProductSales).IsOptional().HasPrecision(19,4);
         }
     }
 

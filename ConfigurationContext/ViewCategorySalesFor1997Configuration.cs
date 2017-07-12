@@ -18,14 +18,14 @@ namespace ConfigurationContext
 
     // Category Sales for 1997
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CategorySalesFor1997Configuration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<CategorySalesFor1997>
+    public class ViewCategorySalesFor1997Configuration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewCategorySalesFor1997>
     {
-        public CategorySalesFor1997Configuration()
+        public ViewCategorySalesFor1997Configuration()
             : this("dbo")
         {
         }
 
-        public CategorySalesFor1997Configuration(string schema)
+        public ViewCategorySalesFor1997Configuration(string schema)
         {
             Property(x => x.CategorySales).IsOptional().HasPrecision(19,4);
         }

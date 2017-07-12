@@ -16,35 +16,35 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Invoices
+    // Orders Qry
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class InvoiceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Invoice>
+    public class ViewOrdersQryConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewOrdersQry>
     {
-        public InvoiceConfiguration()
+        public ViewOrdersQryConfiguration()
             : this("dbo")
         {
         }
 
-        public InvoiceConfiguration(string schema)
+        public ViewOrdersQryConfiguration(string schema)
         {
+            Property(x => x.CustomerId).IsOptional().IsFixedLength();
+            Property(x => x.EmployeeId).IsOptional();
+            Property(x => x.OrderDate).IsOptional();
+            Property(x => x.RequiredDate).IsOptional();
+            Property(x => x.ShippedDate).IsOptional();
+            Property(x => x.ShipVia).IsOptional();
+            Property(x => x.Freight).IsOptional().HasPrecision(19,4);
             Property(x => x.ShipName).IsOptional();
             Property(x => x.ShipAddress).IsOptional();
             Property(x => x.ShipCity).IsOptional();
             Property(x => x.ShipRegion).IsOptional();
             Property(x => x.ShipPostalCode).IsOptional();
             Property(x => x.ShipCountry).IsOptional();
-            Property(x => x.CustomerId).IsOptional().IsFixedLength();
             Property(x => x.Address).IsOptional();
             Property(x => x.City).IsOptional();
             Property(x => x.Region).IsOptional();
             Property(x => x.PostalCode).IsOptional();
             Property(x => x.Country).IsOptional();
-            Property(x => x.OrderDate).IsOptional();
-            Property(x => x.RequiredDate).IsOptional();
-            Property(x => x.ShippedDate).IsOptional();
-            Property(x => x.UnitPrice).HasPrecision(19,4);
-            Property(x => x.ExtendedPrice).IsOptional().HasPrecision(19,4);
-            Property(x => x.Freight).IsOptional().HasPrecision(19,4);
         }
     }
 

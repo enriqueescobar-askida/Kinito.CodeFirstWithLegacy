@@ -16,18 +16,19 @@ namespace ConfigurationContext
     using Entities;
     using Interfaces;
 
-    // Products Above Average Price
+    // Summary of Sales by Year
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProductsAboveAveragePriceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ProductsAboveAveragePrice>
+    public class ViewSummaryOfSalesByYearConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<ViewSummaryOfSalesByYear>
     {
-        public ProductsAboveAveragePriceConfiguration()
+        public ViewSummaryOfSalesByYearConfiguration()
             : this("dbo")
         {
         }
 
-        public ProductsAboveAveragePriceConfiguration(string schema)
+        public ViewSummaryOfSalesByYearConfiguration(string schema)
         {
-            Property(x => x.UnitPrice).IsOptional().HasPrecision(19,4);
+            Property(x => x.ShippedDate).IsOptional();
+            Property(x => x.Subtotal).IsOptional().HasPrecision(19,4);
         }
     }
 
