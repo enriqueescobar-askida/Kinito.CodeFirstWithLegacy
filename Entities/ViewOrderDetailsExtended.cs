@@ -19,7 +19,7 @@ namespace Entities
     // Order Details Extended
     [Table("Order Details Extended", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class OrderDetailsExtended
+    public class ViewOrderDetailsExtended
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]

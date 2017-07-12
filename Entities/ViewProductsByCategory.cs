@@ -19,7 +19,7 @@ namespace Entities
     // Products by Category
     [Table("Products by Category", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProductsByCategory
+    public class ViewProductsByCategory
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]

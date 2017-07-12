@@ -16,25 +16,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Entities
 {
 
-    // Summary of Sales by Year
-    [Table("Summary of Sales by Year", Schema = "dbo")]
+    // Current Product List
+    [Table("Current Product List", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class SummaryOfSalesByYear
+    public class ViewCurrentProductList
     {
-        [Column(@"ShippedDate", Order = 1, TypeName = "datetime")]
-        [Display(Name = "Shipped date")]
-        public System.DateTime? ShippedDate { get; set; } // ShippedDate
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"OrderID", Order = 2, TypeName = "int")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column(@"ProductID", Order = 1, TypeName = "int")]
         [Required]
         [Key]
-        [Display(Name = "Order ID")]
-        public int OrderId { get; set; } // OrderID (Primary key)
+        [Display(Name = "Product ID")]
+        public int ProductId { get; set; } // ProductID (Primary key)
 
-        [Column(@"Subtotal", Order = 3, TypeName = "money")]
-        [Display(Name = "Subtotal")]
-        public decimal? Subtotal { get; set; } // Subtotal
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column(@"ProductName", Order = 2, TypeName = "nvarchar")]
+        [Required]
+        [MaxLength(40)]
+        [StringLength(40)]
+        [Key]
+        [Display(Name = "Product name")]
+        public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
     }
 
 }

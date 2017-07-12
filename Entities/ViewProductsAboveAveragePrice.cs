@@ -16,29 +16,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Entities
 {
 
-    // Sales by Category
-    [Table("Sales by Category", Schema = "dbo")]
+    // Products Above Average Price
+    [Table("Products Above Average Price", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class SalesByCategory
+    public class ViewProductsAboveAveragePrice
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"CategoryID", Order = 1, TypeName = "int")]
-        [Required]
-        [Key]
-        [Display(Name = "Category ID")]
-        public int CategoryId { get; set; } // CategoryID (Primary key)
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"CategoryName", Order = 2, TypeName = "nvarchar")]
-        [Required]
-        [MaxLength(15)]
-        [StringLength(15)]
-        [Key]
-        [Display(Name = "Category name")]
-        public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"ProductName", Order = 3, TypeName = "nvarchar")]
+        [Column(@"ProductName", Order = 1, TypeName = "nvarchar")]
         [Required]
         [MaxLength(40)]
         [StringLength(40)]
@@ -46,9 +30,9 @@ namespace Entities
         [Display(Name = "Product name")]
         public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
 
-        [Column(@"ProductSales", Order = 4, TypeName = "money")]
-        [Display(Name = "Product sales")]
-        public decimal? ProductSales { get; set; } // ProductSales
+        [Column(@"UnitPrice", Order = 2, TypeName = "money")]
+        [Display(Name = "Unit price")]
+        public decimal? UnitPrice { get; set; } // UnitPrice
     }
 
 }

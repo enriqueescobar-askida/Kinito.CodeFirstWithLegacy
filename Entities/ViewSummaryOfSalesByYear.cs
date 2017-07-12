@@ -16,23 +16,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Entities
 {
 
-    // Products Above Average Price
-    [Table("Products Above Average Price", Schema = "dbo")]
+    // Summary of Sales by Year
+    [Table("Summary of Sales by Year", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProductsAboveAveragePrice
+    public class ViewSummaryOfSalesByYear
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"ProductName", Order = 1, TypeName = "nvarchar")]
-        [Required]
-        [MaxLength(40)]
-        [StringLength(40)]
-        [Key]
-        [Display(Name = "Product name")]
-        public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
+        [Column(@"ShippedDate", Order = 1, TypeName = "datetime")]
+        [Display(Name = "Shipped date")]
+        public System.DateTime? ShippedDate { get; set; } // ShippedDate
 
-        [Column(@"UnitPrice", Order = 2, TypeName = "money")]
-        [Display(Name = "Unit price")]
-        public decimal? UnitPrice { get; set; } // UnitPrice
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column(@"OrderID", Order = 2, TypeName = "int")]
+        [Required]
+        [Key]
+        [Display(Name = "Order ID")]
+        public int OrderId { get; set; } // OrderID (Primary key)
+
+        [Column(@"Subtotal", Order = 3, TypeName = "money")]
+        [Display(Name = "Subtotal")]
+        public decimal? Subtotal { get; set; } // Subtotal
     }
 
 }

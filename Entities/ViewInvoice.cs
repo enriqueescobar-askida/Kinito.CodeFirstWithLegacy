@@ -19,7 +19,7 @@ namespace Entities
     // Invoices
     [Table("Invoices", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class Invoice
+    public class ViewInvoice
     {
         [Column(@"ShipName", Order = 1, TypeName = "nvarchar")]
         [MaxLength(40)]

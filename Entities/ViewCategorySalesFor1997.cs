@@ -16,26 +16,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Entities
 {
 
-    // Current Product List
-    [Table("Current Product List", Schema = "dbo")]
+    // Category Sales for 1997
+    [Table("Category Sales for 1997", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CurrentProductList
+    public class ViewCategorySalesFor1997
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column(@"ProductID", Order = 1, TypeName = "int")]
-        [Required]
-        [Key]
-        [Display(Name = "Product ID")]
-        public int ProductId { get; set; } // ProductID (Primary key)
-
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Column(@"ProductName", Order = 2, TypeName = "nvarchar")]
+        [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]
         [Required]
-        [MaxLength(40)]
-        [StringLength(40)]
+        [MaxLength(15)]
+        [StringLength(15)]
         [Key]
-        [Display(Name = "Product name")]
-        public string ProductName { get; set; } // ProductName (Primary key) (length: 40)
+        [Display(Name = "Category name")]
+        public string CategoryName { get; set; } // CategoryName (Primary key) (length: 15)
+
+        [Column(@"CategorySales", Order = 2, TypeName = "money")]
+        [Display(Name = "Category sales")]
+        public decimal? CategorySales { get; set; } // CategorySales
     }
 
 }
