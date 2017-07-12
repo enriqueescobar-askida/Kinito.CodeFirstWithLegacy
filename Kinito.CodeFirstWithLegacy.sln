@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6A6CAF66-FC5E-4E55-A34C-A83F04631F7B}"
 	ProjectSection(SolutionItems) = preProject
 		Northwind.bak.zip = Northwind.bak.zip
+		NORTHWIND_.7z = NORTHWIND_.7z
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{596043C1-F464-47A6-BF21-6ED3EFBF5983}"
