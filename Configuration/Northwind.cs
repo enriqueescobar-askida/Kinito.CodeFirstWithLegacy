@@ -27,11 +27,10 @@
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
 
-namespace Context
+namespace Configuration
 {
-    using ConsoleNorthwind;
+    using Context;
     using Entities;
-    using Interfaces;
 
 }
 // </auto-generated>
