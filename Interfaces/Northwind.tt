@@ -289,6 +289,14 @@
         /*if (sp.NameHumanCase.StartsWith("sp_"))
             return sp.NameHumanCase.Remove(0, 3);
         return sp.NameHumanCase.Replace("my_sp_", "");*/
+		if (sp.NameHumanCase.Contains("OrdersOrders"))
+			sp.NameHumanCase = sp.NameHumanCase.Replace("OrdersOrders", "Orders");
+		if (sp.NameHumanCase.Contains("Orders"))
+			sp.NameHumanCase = sp.NameHumanCase.Replace("Orders", "Order");
+		if (sp.NameHumanCase.StartsWith("CustOrder"))
+            sp.NameHumanCase = sp.NameHumanCase.Replace("CustOrder", "CustomerOrder");
+		if (sp.NameHumanCase.Contains("Hist"))
+			sp.NameHumanCase = sp.NameHumanCase.Replace("Hist", "History");
 		return "Procedure" + sp.NameHumanCase;
     };
     //StoredProcedureRename = (sp) => sp.NameHumanCase;   // Do nothing by default

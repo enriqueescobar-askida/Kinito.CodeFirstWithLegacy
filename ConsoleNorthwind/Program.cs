@@ -18,8 +18,8 @@
                 }
                 Console.WriteLine();
 
-                var history = db.ProcedureCustOrderHist("ALFKI");
-                foreach (ProcedureCustOrderHistReturnModel item in history)
+                var history = db.ProcedureCustomerOrderHistory("ALFKI");
+                foreach (ProcedureCustomerOrderHistoryReturnModel item in history)
                 {
                     Console.WriteLine("{0, 2} {1}", item.Total, item.ProductName);
                 }

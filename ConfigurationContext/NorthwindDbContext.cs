@@ -171,92 +171,92 @@ namespace ConfigurationContext
         }
 
         // Stored Procedures
-        public System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId)
+        public System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel> ProcedureCustomerOrderHistory(string customerId)
         {
             int procResult;
-            return ProcedureCustOrderHist(customerId, out procResult);
+            return ProcedureCustomerOrderHistory(customerId, out procResult);
         }
 
-        public System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel> ProcedureCustomerOrderHistory(string customerId, out int procResult)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<ProcedureCustOrderHistReturnModel>("EXEC @procResult = [dbo].[CustOrderHist] @CustomerID", customerIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustomerOrderHistoryReturnModel>("EXEC @procResult = [dbo].[CustOrderHist] @CustomerID", customerIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrderHistReturnModel>> ProcedureCustOrderHistAsync(string customerId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel>> ProcedureCustomerOrderHistoryAsync(string customerId)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<ProcedureCustOrderHistReturnModel>("EXEC [dbo].[CustOrderHist] @CustomerID", customerIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustomerOrderHistoryReturnModel>("EXEC [dbo].[CustOrderHist] @CustomerID", customerIdParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId)
+        public System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel> ProcedureCustomerOrderDetail(int? orderId)
         {
             int procResult;
-            return ProcedureCustOrdersDetail(orderId, out procResult);
+            return ProcedureCustomerOrderDetail(orderId, out procResult);
         }
 
-        public System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel> ProcedureCustomerOrderDetail(int? orderId, out int procResult)
         {
             var orderIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@OrderID", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = orderId.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!orderId.HasValue)
                 orderIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<ProcedureCustOrdersDetailReturnModel>("EXEC @procResult = [dbo].[CustOrdersDetail] @OrderID", orderIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustomerOrderDetailReturnModel>("EXEC @procResult = [dbo].[CustOrdersDetail] @OrderID", orderIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel>> ProcedureCustOrdersDetailAsync(int? orderId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel>> ProcedureCustomerOrderDetailAsync(int? orderId)
         {
             var orderIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@OrderID", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = orderId.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!orderId.HasValue)
                 orderIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<ProcedureCustOrdersDetailReturnModel>("EXEC [dbo].[CustOrdersDetail] @OrderID", orderIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustomerOrderDetailReturnModel>("EXEC [dbo].[CustOrdersDetail] @OrderID", orderIdParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId)
+        public System.Collections.Generic.List<ProcedureCustomerOrderReturnModel> ProcedureCustomerOrder(string customerId)
         {
             int procResult;
-            return ProcedureCustOrdersOrders(customerId, out procResult);
+            return ProcedureCustomerOrder(customerId, out procResult);
         }
 
-        public System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustomerOrderReturnModel> ProcedureCustomerOrder(string customerId, out int procResult)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<ProcedureCustOrdersOrdersReturnModel>("EXEC @procResult = [dbo].[CustOrdersOrders] @CustomerID", customerIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustomerOrderReturnModel>("EXEC @procResult = [dbo].[CustOrdersOrders] @CustomerID", customerIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel>> ProcedureCustOrdersOrdersAsync(string customerId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderReturnModel>> ProcedureCustomerOrderAsync(string customerId)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<ProcedureCustOrdersOrdersReturnModel>("EXEC [dbo].[CustOrdersOrders] @CustomerID", customerIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustomerOrderReturnModel>("EXEC [dbo].[CustOrdersOrders] @CustomerID", customerIdParam).ToListAsync();
 
             return procResultData;
         }

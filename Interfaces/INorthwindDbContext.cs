@@ -62,17 +62,17 @@ namespace Interfaces
         string ToString();
 
         // Stored Procedures
-        System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId);
-        System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrderHistReturnModel>> ProcedureCustOrderHistAsync(string customerId);
+        System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel> ProcedureCustomerOrderHistory(string customerId);
+        System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel> ProcedureCustomerOrderHistory(string customerId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderHistoryReturnModel>> ProcedureCustomerOrderHistoryAsync(string customerId);
 
-        System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId);
-        System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel>> ProcedureCustOrdersDetailAsync(int? orderId);
+        System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel> ProcedureCustomerOrderDetail(int? orderId);
+        System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel> ProcedureCustomerOrderDetail(int? orderId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderDetailReturnModel>> ProcedureCustomerOrderDetailAsync(int? orderId);
 
-        System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId);
-        System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel>> ProcedureCustOrdersOrdersAsync(string customerId);
+        System.Collections.Generic.List<ProcedureCustomerOrderReturnModel> ProcedureCustomerOrder(string customerId);
+        System.Collections.Generic.List<ProcedureCustomerOrderReturnModel> ProcedureCustomerOrder(string customerId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustomerOrderReturnModel>> ProcedureCustomerOrderAsync(string customerId);
 
         System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate);
         System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult);

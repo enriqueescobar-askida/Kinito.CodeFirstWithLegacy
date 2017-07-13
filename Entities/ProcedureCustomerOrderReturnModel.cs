@@ -17,10 +17,12 @@ namespace Entities
 {
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ProcedureCustOrderHistReturnModel
+    public class ProcedureCustomerOrderReturnModel
     {
-        public System.String ProductName { get; set; }
-        public System.Int32? Total { get; set; }
+        public System.Int32 OrderID { get; set; }
+        public System.DateTime? OrderDate { get; set; }
+        public System.DateTime? RequiredDate { get; set; }
+        public System.DateTime? ShippedDate { get; set; }
     }
 
 }

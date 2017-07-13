@@ -89,13 +89,13 @@
     <Compile Include="ProcedureCsvToIntReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProcedureCustOrderHistReturnModel.cs">
+    <Compile Include="ProcedureCustomerOrderDetailReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProcedureCustOrdersDetailReturnModel.cs">
+    <Compile Include="ProcedureCustomerOrderHistoryReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProcedureCustOrdersOrdersReturnModel.cs">
+    <Compile Include="ProcedureCustomerOrderReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="ProcedureEmployeeSalesByCountryReturnModel.cs">
