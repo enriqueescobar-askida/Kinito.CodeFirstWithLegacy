@@ -19,7 +19,7 @@ namespace Entities
     // Suppliers
     [Table("Suppliers", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class Supplier
+    public class Supplier /* Column Count = 12 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"SupplierID", Order = 1, TypeName = "int")]

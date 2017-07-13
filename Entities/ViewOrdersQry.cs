@@ -19,7 +19,7 @@ namespace Entities
     // Orders Qry
     [Table("Orders Qry", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewOrdersQry
+    public class ViewOrdersQry /* Column Count = 20 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]

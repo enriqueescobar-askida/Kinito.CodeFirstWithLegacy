@@ -19,7 +19,7 @@ namespace Entities
     // Territories
     [Table("Territories", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class Territory
+    public class Territory /* Column Count = 3 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"TerritoryID", Order = 1, TypeName = "nvarchar")]

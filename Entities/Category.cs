@@ -19,7 +19,7 @@ namespace Entities
     // Categories
     [Table("Categories", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class Category
+    public class Category /* Column Count = 4 */
     {
 
         ///<summary>

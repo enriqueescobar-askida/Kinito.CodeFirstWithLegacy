@@ -356,7 +356,7 @@
         return r.ToString();
         */
 
-        return "";
+        return String.Format(" /* Column Count = {0} */", t.Columns.Count);
     };
 
     // Writes any boilerplate stuff

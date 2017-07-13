@@ -19,7 +19,7 @@ namespace Entities
     // GeographyTypes
     [Table("GeographyTypes", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class GeographyType
+    public class GeographyType /* Column Count = 3 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"Id", Order = 1, TypeName = "int")]

@@ -19,7 +19,7 @@ namespace Entities
     // Products Above Average Price
     [Table("Products Above Average Price", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewProductsAboveAveragePrice
+    public class ViewProductsAboveAveragePrice /* Column Count = 2 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 1, TypeName = "nvarchar")]

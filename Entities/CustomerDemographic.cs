@@ -19,7 +19,7 @@ namespace Entities
     // CustomerDemographics
     [Table("CustomerDemographics", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CustomerDemographic
+    public class CustomerDemographic /* Column Count = 2 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CustomerTypeID", Order = 1, TypeName = "nchar")]

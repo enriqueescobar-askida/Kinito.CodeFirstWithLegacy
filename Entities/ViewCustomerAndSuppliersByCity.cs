@@ -19,7 +19,7 @@ namespace Entities
     // Customer and Suppliers by City
     [Table("Customer and Suppliers by City", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewCustomerAndSuppliersByCity
+    public class ViewCustomerAndSuppliersByCity /* Column Count = 4 */
     {
         [Column(@"City", Order = 1, TypeName = "nvarchar")]
         [MaxLength(15)]

@@ -19,7 +19,7 @@ namespace Entities
     // Summary of Sales by Year
     [Table("Summary of Sales by Year", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewSummaryOfSalesByYear
+    public class ViewSummaryOfSalesByYear /* Column Count = 3 */
     {
         [Column(@"ShippedDate", Order = 1, TypeName = "datetime")]
         [Display(Name = "Shipped date")]

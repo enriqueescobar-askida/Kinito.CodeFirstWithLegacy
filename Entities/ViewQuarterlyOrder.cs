@@ -21,7 +21,7 @@ namespace Entities
     // Quarterly Orders
     [NotMapped]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewQuarterlyOrder
+    public class ViewQuarterlyOrder /* Column Count = 4 */
     {
         [Column(@"CustomerID", Order = 1, TypeName = "nchar")]
         [MaxLength(5)]

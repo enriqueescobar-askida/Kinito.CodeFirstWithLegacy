@@ -19,7 +19,7 @@ namespace Entities
     // Alphabetical list of products
     [Table("Alphabetical list of products", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewAlphabeticalListOfProduct
+    public class ViewAlphabeticalListOfProduct /* Column Count = 11 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductID", Order = 1, TypeName = "int")]

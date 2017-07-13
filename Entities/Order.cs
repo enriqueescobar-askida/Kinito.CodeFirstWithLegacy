@@ -19,7 +19,7 @@ namespace Entities
     // Orders
     [Table("Orders", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class Order
+    public class Order /* Column Count = 14 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]

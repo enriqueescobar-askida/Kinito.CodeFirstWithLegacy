@@ -19,7 +19,7 @@ namespace Entities
     // Summary of Sales by Quarter
     [Table("Summary of Sales by Quarter", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewSummaryOfSalesByQuarter
+    public class ViewSummaryOfSalesByQuarter /* Column Count = 3 */
     {
         [Column(@"ShippedDate", Order = 1, TypeName = "datetime")]
         [Display(Name = "Shipped date")]

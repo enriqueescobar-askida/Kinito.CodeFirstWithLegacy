@@ -19,7 +19,7 @@ namespace Entities
     // Category Sales for 1997
     [Table("Category Sales for 1997", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewCategorySalesFor1997
+    public class ViewCategorySalesFor1997 /* Column Count = 2 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]

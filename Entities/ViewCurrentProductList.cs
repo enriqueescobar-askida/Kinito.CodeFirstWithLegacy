@@ -19,7 +19,7 @@ namespace Entities
     // Current Product List
     [Table("Current Product List", Schema = "dbo")]
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class ViewCurrentProductList
+    public class ViewCurrentProductList /* Column Count = 2 */
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"ProductID", Order = 1, TypeName = "int")]
