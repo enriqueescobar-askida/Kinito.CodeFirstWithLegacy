@@ -206,9 +206,19 @@
         //if (name.StartsWith("tbl"))
         //    name = name.Remove(0, 3);
         //name = name.Replace("_AB", "");
+		if(name.Contains("And"))
+		{
+			name = name.Replace("And", "");
+		}
+		if(name.Contains("Of"))
+		{
+			name = name.Replace("Of", "");
+		}
 
         if(isView)
+		{
             name = "View" + name;
+		}
 
         // If you turn pascal casing off (UsePascalCase = false), and use the pluralisation service, and some of your
         // tables names are all UPPERCASE, some words ending in IES such as CATEGORIES get singularised as CATEGORy.
