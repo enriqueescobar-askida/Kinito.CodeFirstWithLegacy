@@ -68,6 +68,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="EF.Reverse.POCO.Core.ttinclude" />
     <None Include="EF.Reverse.POCO.ttinclude" />
     <None Include="packages.config" />
