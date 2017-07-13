@@ -17,13 +17,9 @@ namespace Entities
 {
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CustOrdersDetailReturnModel
+    public class ProcedureCsvToIntReturnModel
     {
-        public System.String ProductName { get; set; }
-        public System.Decimal? UnitPrice { get; set; }
-        public System.Int16 Quantity { get; set; }
-        public System.Int32? Discount { get; set; }
-        public System.Decimal? ExtendedPrice { get; set; }
+        public System.Int32? IntValue { get; set; }
     }
 
 }

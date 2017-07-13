@@ -54,28 +54,13 @@
     <Compile Include="Category.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="CsvToIntReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
     <Compile Include="Customer.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="CustomerDemographic.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="CustOrderHistReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersDetailReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersOrdersReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeSalesByCountryReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="Engineer.cs">
@@ -101,6 +86,30 @@
     <Compile Include="OrderDetail.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProcedureCsvToIntReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureCustOrderHistReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureCustOrdersDetailReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureCustOrdersOrdersReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureEmployeeSalesByCountryReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureSalesByCategoryReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureSalesByYearReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureTenMostExpensiveProductsReturnModel.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
@@ -108,19 +117,10 @@
     <Compile Include="Region.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="SalesByCategoryReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SalesByYearReturnModel.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
     <Compile Include="Shipper.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TenMostExpensiveProductsReturnModel.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="Territory.cs">

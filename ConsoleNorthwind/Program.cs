@@ -18,8 +18,8 @@
                 }
                 Console.WriteLine();
 
-                var history = db.CustOrderHist("ALFKI");
-                foreach (CustOrderHistReturnModel item in history)
+                var history = db.ProcedureCustOrderHist("ALFKI");
+                foreach (ProcedureCustOrderHistReturnModel item in history)
                 {
                     Console.WriteLine("{0, 2} {1}", item.Total, item.ProductName);
                 }
@@ -29,7 +29,7 @@
                 OrderDetail orderDetail = db.OrderDetails.First();
                 Console.WriteLine(orderDetail.Product.ProductName);
                 Console.WriteLine();
-                var csvToInt = db.CsvToInt("2,4,6,8").Select(x => x.IntValue);
+                var csvToInt = db.ProcedureCsvToInt("2,4,6,8").Select(x => x.IntValue);
                 foreach (var item in csvToInt)
                 {
                     Console.WriteLine(item);

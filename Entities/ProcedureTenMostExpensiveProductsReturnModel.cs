@@ -17,10 +17,10 @@ namespace Entities
 {
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class SalesByCategoryReturnModel
+    public class ProcedureTenMostExpensiveProductsReturnModel
     {
-        public System.String ProductName { get; set; }
-        public System.Decimal? TotalPurchase { get; set; }
+        public System.String TenMostExpensiveProducts { get; set; }
+        public System.Decimal? UnitPrice { get; set; }
     }
 
 }

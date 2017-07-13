@@ -101,7 +101,7 @@ namespace ConfigurationContext
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Conventions.Add(new CodeFirstStoreFunctions.FunctionsConvention<NorthwindDbContext>("dbo"));
-            modelBuilder.ComplexType<CsvToIntReturnModel>();
+            modelBuilder.ComplexType<ProcedureCsvToIntReturnModel>();
 
             modelBuilder.Configurations.Add(new CategoryConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
@@ -171,103 +171,103 @@ namespace ConfigurationContext
         }
 
         // Stored Procedures
-        public System.Collections.Generic.List<CustOrderHistReturnModel> CustOrderHist(string customerId)
+        public System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId)
         {
             int procResult;
-            return CustOrderHist(customerId, out procResult);
+            return ProcedureCustOrderHist(customerId, out procResult);
         }
 
-        public System.Collections.Generic.List<CustOrderHistReturnModel> CustOrderHist(string customerId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId, out int procResult)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<CustOrderHistReturnModel>("EXEC @procResult = [dbo].[CustOrderHist] @CustomerID", customerIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustOrderHistReturnModel>("EXEC @procResult = [dbo].[CustOrderHist] @CustomerID", customerIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrderHistReturnModel>> CustOrderHistAsync(string customerId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrderHistReturnModel>> ProcedureCustOrderHistAsync(string customerId)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<CustOrderHistReturnModel>("EXEC [dbo].[CustOrderHist] @CustomerID", customerIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustOrderHistReturnModel>("EXEC [dbo].[CustOrderHist] @CustomerID", customerIdParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<CustOrdersDetailReturnModel> CustOrdersDetail(int? orderId)
+        public System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId)
         {
             int procResult;
-            return CustOrdersDetail(orderId, out procResult);
+            return ProcedureCustOrdersDetail(orderId, out procResult);
         }
 
-        public System.Collections.Generic.List<CustOrdersDetailReturnModel> CustOrdersDetail(int? orderId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId, out int procResult)
         {
             var orderIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@OrderID", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = orderId.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!orderId.HasValue)
                 orderIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<CustOrdersDetailReturnModel>("EXEC @procResult = [dbo].[CustOrdersDetail] @OrderID", orderIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustOrdersDetailReturnModel>("EXEC @procResult = [dbo].[CustOrdersDetail] @OrderID", orderIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrdersDetailReturnModel>> CustOrdersDetailAsync(int? orderId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel>> ProcedureCustOrdersDetailAsync(int? orderId)
         {
             var orderIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@OrderID", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = orderId.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!orderId.HasValue)
                 orderIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<CustOrdersDetailReturnModel>("EXEC [dbo].[CustOrdersDetail] @OrderID", orderIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustOrdersDetailReturnModel>("EXEC [dbo].[CustOrdersDetail] @OrderID", orderIdParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<CustOrdersOrdersReturnModel> CustOrdersOrders(string customerId)
+        public System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId)
         {
             int procResult;
-            return CustOrdersOrders(customerId, out procResult);
+            return ProcedureCustOrdersOrders(customerId, out procResult);
         }
 
-        public System.Collections.Generic.List<CustOrdersOrdersReturnModel> CustOrdersOrders(string customerId, out int procResult)
+        public System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId, out int procResult)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<CustOrdersOrdersReturnModel>("EXEC @procResult = [dbo].[CustOrdersOrders] @CustomerID", customerIdParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureCustOrdersOrdersReturnModel>("EXEC @procResult = [dbo].[CustOrdersOrders] @CustomerID", customerIdParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrdersOrdersReturnModel>> CustOrdersOrdersAsync(string customerId)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel>> ProcedureCustOrdersOrdersAsync(string customerId)
         {
             var customerIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CustomerID", SqlDbType = System.Data.SqlDbType.NChar, Direction = System.Data.ParameterDirection.Input, Value = customerId, Size = 5 };
             if (customerIdParam.Value == null)
                 customerIdParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<CustOrdersOrdersReturnModel>("EXEC [dbo].[CustOrdersOrders] @CustomerID", customerIdParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureCustOrdersOrdersReturnModel>("EXEC [dbo].[CustOrdersOrders] @CustomerID", customerIdParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<EmployeeSalesByCountryReturnModel> EmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate)
+        public System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate)
         {
             int procResult;
-            return EmployeeSalesByCountry(beginningDate, endingDate, out procResult);
+            return ProcedureEmployeeSalesByCountry(beginningDate, endingDate, out procResult);
         }
 
-        public System.Collections.Generic.List<EmployeeSalesByCountryReturnModel> EmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult)
+        public System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult)
         {
             var beginningDateParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@Beginning_Date", SqlDbType = System.Data.SqlDbType.DateTime, Direction = System.Data.ParameterDirection.Input, Value = beginningDate.GetValueOrDefault() };
             if (!beginningDate.HasValue)
@@ -278,13 +278,13 @@ namespace ConfigurationContext
                 endingDateParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<EmployeeSalesByCountryReturnModel>("EXEC @procResult = [dbo].[Employee Sales by Country] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureEmployeeSalesByCountryReturnModel>("EXEC @procResult = [dbo].[Employee Sales by Country] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<EmployeeSalesByCountryReturnModel>> EmployeeSalesByCountryAsync(System.DateTime? beginningDate, System.DateTime? endingDate)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel>> ProcedureEmployeeSalesByCountryAsync(System.DateTime? beginningDate, System.DateTime? endingDate)
         {
             var beginningDateParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@Beginning_Date", SqlDbType = System.Data.SqlDbType.DateTime, Direction = System.Data.ParameterDirection.Input, Value = beginningDate.GetValueOrDefault() };
             if (!beginningDate.HasValue)
@@ -294,18 +294,18 @@ namespace ConfigurationContext
             if (!endingDate.HasValue)
                 endingDateParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<EmployeeSalesByCountryReturnModel>("EXEC [dbo].[Employee Sales by Country] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureEmployeeSalesByCountryReturnModel>("EXEC [dbo].[Employee Sales by Country] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<SalesByYearReturnModel> SalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate)
+        public System.Collections.Generic.List<ProcedureSalesByYearReturnModel> ProcedureSalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate)
         {
             int procResult;
-            return SalesByYear(beginningDate, endingDate, out procResult);
+            return ProcedureSalesByYear(beginningDate, endingDate, out procResult);
         }
 
-        public System.Collections.Generic.List<SalesByYearReturnModel> SalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult)
+        public System.Collections.Generic.List<ProcedureSalesByYearReturnModel> ProcedureSalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult)
         {
             var beginningDateParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@Beginning_Date", SqlDbType = System.Data.SqlDbType.DateTime, Direction = System.Data.ParameterDirection.Input, Value = beginningDate.GetValueOrDefault() };
             if (!beginningDate.HasValue)
@@ -316,13 +316,13 @@ namespace ConfigurationContext
                 endingDateParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<SalesByYearReturnModel>("EXEC @procResult = [dbo].[Sales by Year] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureSalesByYearReturnModel>("EXEC @procResult = [dbo].[Sales by Year] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<SalesByYearReturnModel>> SalesByYearAsync(System.DateTime? beginningDate, System.DateTime? endingDate)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureSalesByYearReturnModel>> ProcedureSalesByYearAsync(System.DateTime? beginningDate, System.DateTime? endingDate)
         {
             var beginningDateParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@Beginning_Date", SqlDbType = System.Data.SqlDbType.DateTime, Direction = System.Data.ParameterDirection.Input, Value = beginningDate.GetValueOrDefault() };
             if (!beginningDate.HasValue)
@@ -332,18 +332,18 @@ namespace ConfigurationContext
             if (!endingDate.HasValue)
                 endingDateParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<SalesByYearReturnModel>("EXEC [dbo].[Sales by Year] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureSalesByYearReturnModel>("EXEC [dbo].[Sales by Year] @Beginning_Date, @Ending_Date", beginningDateParam, endingDateParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<SalesByCategoryReturnModel> SalesByCategory(string categoryName, string ordYear)
+        public System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel> ProcedureSalesByCategory(string categoryName, string ordYear)
         {
             int procResult;
-            return SalesByCategory(categoryName, ordYear, out procResult);
+            return ProcedureSalesByCategory(categoryName, ordYear, out procResult);
         }
 
-        public System.Collections.Generic.List<SalesByCategoryReturnModel> SalesByCategory(string categoryName, string ordYear, out int procResult)
+        public System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel> ProcedureSalesByCategory(string categoryName, string ordYear, out int procResult)
         {
             var categoryNameParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CategoryName", SqlDbType = System.Data.SqlDbType.NVarChar, Direction = System.Data.ParameterDirection.Input, Value = categoryName, Size = 15 };
             if (categoryNameParam.Value == null)
@@ -354,13 +354,13 @@ namespace ConfigurationContext
                 ordYearParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<SalesByCategoryReturnModel>("EXEC @procResult = [dbo].[SalesByCategory] @CategoryName, @OrdYear", categoryNameParam, ordYearParam, procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureSalesByCategoryReturnModel>("EXEC @procResult = [dbo].[SalesByCategory] @CategoryName, @OrdYear", categoryNameParam, ordYearParam, procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<SalesByCategoryReturnModel>> SalesByCategoryAsync(string categoryName, string ordYear)
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel>> ProcedureSalesByCategoryAsync(string categoryName, string ordYear)
         {
             var categoryNameParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@CategoryName", SqlDbType = System.Data.SqlDbType.NVarChar, Direction = System.Data.ParameterDirection.Input, Value = categoryName, Size = 15 };
             if (categoryNameParam.Value == null)
@@ -370,29 +370,29 @@ namespace ConfigurationContext
             if (ordYearParam.Value == null)
                 ordYearParam.Value = System.DBNull.Value;
 
-            var procResultData = await Database.SqlQuery<SalesByCategoryReturnModel>("EXEC [dbo].[SalesByCategory] @CategoryName, @OrdYear", categoryNameParam, ordYearParam).ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureSalesByCategoryReturnModel>("EXEC [dbo].[SalesByCategory] @CategoryName, @OrdYear", categoryNameParam, ordYearParam).ToListAsync();
 
             return procResultData;
         }
 
-        public System.Collections.Generic.List<TenMostExpensiveProductsReturnModel> TenMostExpensiveProducts()
+        public System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel> ProcedureTenMostExpensiveProducts()
         {
             int procResult;
-            return TenMostExpensiveProducts(out procResult);
+            return ProcedureTenMostExpensiveProducts(out procResult);
         }
 
-        public System.Collections.Generic.List<TenMostExpensiveProductsReturnModel> TenMostExpensiveProducts(out int procResult)
+        public System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel> ProcedureTenMostExpensiveProducts(out int procResult)
         {
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<TenMostExpensiveProductsReturnModel>("EXEC @procResult = [dbo].[Ten Most Expensive Products] ", procResultParam).ToList();
+            var procResultData = Database.SqlQuery<ProcedureTenMostExpensiveProductsReturnModel>("EXEC @procResult = [dbo].[Ten Most Expensive Products] ", procResultParam).ToList();
 
             procResult = (int) procResultParam.Value;
             return procResultData;
         }
 
-        public async System.Threading.Tasks.Task<System.Collections.Generic.List<TenMostExpensiveProductsReturnModel>> TenMostExpensiveProductsAsync()
+        public async System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel>> ProcedureTenMostExpensiveProductsAsync()
         {
-            var procResultData = await Database.SqlQuery<TenMostExpensiveProductsReturnModel>("EXEC [dbo].[Ten Most Expensive Products] ").ToListAsync();
+            var procResultData = await Database.SqlQuery<ProcedureTenMostExpensiveProductsReturnModel>("EXEC [dbo].[Ten Most Expensive Products] ").ToListAsync();
 
             return procResultData;
         }
@@ -400,11 +400,11 @@ namespace ConfigurationContext
         // Table Valued Functions
         [System.Data.Entity.DbFunction("NorthwindDbContext", "CsvToInt")]
         [CodeFirstStoreFunctions.DbFunctionDetails(DatabaseSchema = "dbo", ResultColumnName = "IntValue")]
-        public IQueryable<CsvToIntReturnModel> CsvToInt(string array)
+        public IQueryable<ProcedureCsvToIntReturnModel> ProcedureCsvToInt(string array)
         {
             var arrayParam = new System.Data.Entity.Core.Objects.ObjectParameter("array", typeof(string)) { Value = array };
 
-            return ((System.Data.Entity.Infrastructure.IObjectContextAdapter)this).ObjectContext.CreateQuery<CsvToIntReturnModel>("[NorthwindDbContext].[CsvToInt](@array)", arrayParam);
+            return ((System.Data.Entity.Infrastructure.IObjectContextAdapter)this).ObjectContext.CreateQuery<ProcedureCsvToIntReturnModel>("[NorthwindDbContext].[CsvToInt](@array)", arrayParam);
         }
 
     }

@@ -17,9 +17,14 @@ namespace Entities
 {
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
-    public class CsvToIntReturnModel
+    public class ProcedureEmployeeSalesByCountryReturnModel
     {
-        public System.Int32? IntValue { get; set; }
+        public System.String Country { get; set; }
+        public System.String LastName { get; set; }
+        public System.String FirstName { get; set; }
+        public System.DateTime? ShippedDate { get; set; }
+        public System.Int32 OrderID { get; set; }
+        public System.Decimal? SaleAmount { get; set; }
     }
 
 }

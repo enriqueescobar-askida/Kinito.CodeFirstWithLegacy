@@ -62,37 +62,37 @@ namespace Interfaces
         string ToString();
 
         // Stored Procedures
-        System.Collections.Generic.List<CustOrderHistReturnModel> CustOrderHist(string customerId);
-        System.Collections.Generic.List<CustOrderHistReturnModel> CustOrderHist(string customerId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrderHistReturnModel>> CustOrderHistAsync(string customerId);
+        System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId);
+        System.Collections.Generic.List<ProcedureCustOrderHistReturnModel> ProcedureCustOrderHist(string customerId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrderHistReturnModel>> ProcedureCustOrderHistAsync(string customerId);
 
-        System.Collections.Generic.List<CustOrdersDetailReturnModel> CustOrdersDetail(int? orderId);
-        System.Collections.Generic.List<CustOrdersDetailReturnModel> CustOrdersDetail(int? orderId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrdersDetailReturnModel>> CustOrdersDetailAsync(int? orderId);
+        System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId);
+        System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel> ProcedureCustOrdersDetail(int? orderId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersDetailReturnModel>> ProcedureCustOrdersDetailAsync(int? orderId);
 
-        System.Collections.Generic.List<CustOrdersOrdersReturnModel> CustOrdersOrders(string customerId);
-        System.Collections.Generic.List<CustOrdersOrdersReturnModel> CustOrdersOrders(string customerId, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<CustOrdersOrdersReturnModel>> CustOrdersOrdersAsync(string customerId);
+        System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId);
+        System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel> ProcedureCustOrdersOrders(string customerId, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureCustOrdersOrdersReturnModel>> ProcedureCustOrdersOrdersAsync(string customerId);
 
-        System.Collections.Generic.List<EmployeeSalesByCountryReturnModel> EmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate);
-        System.Collections.Generic.List<EmployeeSalesByCountryReturnModel> EmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<EmployeeSalesByCountryReturnModel>> EmployeeSalesByCountryAsync(System.DateTime? beginningDate, System.DateTime? endingDate);
+        System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate);
+        System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel> ProcedureEmployeeSalesByCountry(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureEmployeeSalesByCountryReturnModel>> ProcedureEmployeeSalesByCountryAsync(System.DateTime? beginningDate, System.DateTime? endingDate);
 
-        System.Collections.Generic.List<SalesByYearReturnModel> SalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate);
-        System.Collections.Generic.List<SalesByYearReturnModel> SalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SalesByYearReturnModel>> SalesByYearAsync(System.DateTime? beginningDate, System.DateTime? endingDate);
+        System.Collections.Generic.List<ProcedureSalesByYearReturnModel> ProcedureSalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate);
+        System.Collections.Generic.List<ProcedureSalesByYearReturnModel> ProcedureSalesByYear(System.DateTime? beginningDate, System.DateTime? endingDate, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureSalesByYearReturnModel>> ProcedureSalesByYearAsync(System.DateTime? beginningDate, System.DateTime? endingDate);
 
-        System.Collections.Generic.List<SalesByCategoryReturnModel> SalesByCategory(string categoryName, string ordYear);
-        System.Collections.Generic.List<SalesByCategoryReturnModel> SalesByCategory(string categoryName, string ordYear, out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SalesByCategoryReturnModel>> SalesByCategoryAsync(string categoryName, string ordYear);
+        System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel> ProcedureSalesByCategory(string categoryName, string ordYear);
+        System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel> ProcedureSalesByCategory(string categoryName, string ordYear, out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureSalesByCategoryReturnModel>> ProcedureSalesByCategoryAsync(string categoryName, string ordYear);
 
-        System.Collections.Generic.List<TenMostExpensiveProductsReturnModel> TenMostExpensiveProducts();
-        System.Collections.Generic.List<TenMostExpensiveProductsReturnModel> TenMostExpensiveProducts(out int procResult);
-        System.Threading.Tasks.Task<System.Collections.Generic.List<TenMostExpensiveProductsReturnModel>> TenMostExpensiveProductsAsync();
+        System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel> ProcedureTenMostExpensiveProducts();
+        System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel> ProcedureTenMostExpensiveProducts(out int procResult);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProcedureTenMostExpensiveProductsReturnModel>> ProcedureTenMostExpensiveProductsAsync();
 
 
         // Table Valued Functions
-        System.Linq.IQueryable<CsvToIntReturnModel> CsvToInt(string array);
+        System.Linq.IQueryable<ProcedureCsvToIntReturnModel> ProcedureCsvToInt(string array);
     }
 
 }

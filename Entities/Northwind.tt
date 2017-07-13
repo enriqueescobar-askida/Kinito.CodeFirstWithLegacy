@@ -283,13 +283,14 @@
     // StoredProcedure renaming ************************************************************************************************************
     // Use the following function to rename stored procs such as sp_CreateOrderHistory to CreateOrderHistory, my_sp_shipments to Shipments, etc.
     // Example:
-    /*StoredProcedureRename = (sp) =>
+    StoredProcedureRename = (sp) =>
     {
-        if (sp.NameHumanCase.StartsWith("sp_"))
+        /*if (sp.NameHumanCase.StartsWith("sp_"))
             return sp.NameHumanCase.Remove(0, 3);
-        return sp.NameHumanCase.Replace("my_sp_", "");
-    };*/
-    StoredProcedureRename = (sp) => sp.NameHumanCase;   // Do nothing by default
+        return sp.NameHumanCase.Replace("my_sp_", "");*/
+		return "Procedure" + sp.NameHumanCase;
+    };
+    //StoredProcedureRename = (sp) => sp.NameHumanCase;   // Do nothing by default
 
     // Use the following function to rename the return model automatically generated for stored procedure.
     // By default it's <proc_name>ReturnModel.
