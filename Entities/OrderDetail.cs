@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class OrderDetail /* Column Count = 5 */
     {
+        // Number of columns for table Order Detail = 5
+        public static int ColumnCount = 5;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]
         [Index(@"OrderID", 1, IsUnique = false, IsClustered = false)]

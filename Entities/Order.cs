@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Order /* Column Count = 14 */
     {
+        // Number of columns for table Order = 14
+        public static int ColumnCount = 14;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]
         [Index(@"PK_Orders", 1, IsUnique = true, IsClustered = true)]

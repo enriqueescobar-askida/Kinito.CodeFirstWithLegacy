@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewAlphabeticalListOfProduct /* Column Count = 11 */
     {
+        // Number of columns for table ViewAlphabetical list of product = 11
+        public static int ColumnCount = 11;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductID", Order = 1, TypeName = "int")]
         [Required]

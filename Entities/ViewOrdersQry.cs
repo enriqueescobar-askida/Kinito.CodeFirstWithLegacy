@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewOrdersQry /* Column Count = 20 */
     {
+        // Number of columns for table ViewOrders Qry = 20
+        public static int ColumnCount = 20;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"OrderID", Order = 1, TypeName = "int")]
         [Required]

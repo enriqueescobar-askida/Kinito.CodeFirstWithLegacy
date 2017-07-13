@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewCustomerAndSuppliersByCity /* Column Count = 4 */
     {
+        // Number of columns for table ViewCustomer and Suppliers by City = 4
+        public static int ColumnCount = 4;
+
         [Column(@"City", Order = 1, TypeName = "nvarchar")]
         [MaxLength(15)]
         [StringLength(15)]

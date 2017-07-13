@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewInvoice /* Column Count = 26 */
     {
+        // Number of columns for table ViewInvoice = 26
+        public static int ColumnCount = 26;
+
         [Column(@"ShipName", Order = 1, TypeName = "nvarchar")]
         [MaxLength(40)]
         [StringLength(40)]

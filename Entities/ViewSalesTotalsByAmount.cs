@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewSalesTotalsByAmount /* Column Count = 4 */
     {
+        // Number of columns for table ViewSales Totals by Amount = 4
+        public static int ColumnCount = 4;
+
         [Column(@"SaleAmount", Order = 1, TypeName = "money")]
         [Display(Name = "Sale amount")]
         public decimal? SaleAmount { get; set; } // SaleAmount

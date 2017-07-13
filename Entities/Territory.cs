@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Territory /* Column Count = 3 */
     {
+        // Number of columns for table Territory = 3
+        public static int ColumnCount = 3;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"TerritoryID", Order = 1, TypeName = "nvarchar")]
         [Index(@"PK_Territories", 1, IsUnique = true, IsClustered = false)]

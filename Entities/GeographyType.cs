@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class GeographyType /* Column Count = 3 */
     {
+        // Number of columns for table GeographyType = 3
+        public static int ColumnCount = 3;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"Id", Order = 1, TypeName = "int")]
         [Index(@"PK__Geograph__3214EC0772570466", 1, IsUnique = true, IsClustered = true)]

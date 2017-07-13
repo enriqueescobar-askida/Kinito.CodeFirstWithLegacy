@@ -23,6 +23,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewQuarterlyOrder /* Column Count = 4 */
     {
+        // Number of columns for table ViewQuarterly Order = 4
+        public static int ColumnCount = 4;
+
         [Column(@"CustomerID", Order = 1, TypeName = "nchar")]
         [MaxLength(5)]
         [StringLength(5)]

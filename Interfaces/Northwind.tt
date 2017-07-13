@@ -365,6 +365,9 @@
         // Do nothing by default
         // Example:
         // WriteLine("        // " + t.ClassName);
+		WriteLine("        // Number of columns for table {0} = {1}", t.ClassName, t.Columns.Count);
+		WriteLine("        public static int ColumnCount = {0};", t.Columns.Count);
+		WriteLine("");
     };
 
     Func<Column, string> WritePocoColumn = c =>

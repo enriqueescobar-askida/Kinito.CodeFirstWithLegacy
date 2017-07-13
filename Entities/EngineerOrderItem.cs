@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class EngineerOrderItem /* Column Count = 3 */
     {
+        // Number of columns for table engineer_order_item = 3
+        public static int ColumnCount = 3;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"engineer_order_item_id", Order = 1, TypeName = "int")]
         [Index(@"PK__engineer__1613A3A307C71242", 1, IsUnique = true, IsClustered = true)]

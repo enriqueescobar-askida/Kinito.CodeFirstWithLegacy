@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Employee /* Column Count = 18 */
     {
+        // Number of columns for table Employee = 18
+        public static int ColumnCount = 18;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"EmployeeID", Order = 1, TypeName = "int")]
         [Index(@"PK_Employees", 1, IsUnique = true, IsClustered = true)]

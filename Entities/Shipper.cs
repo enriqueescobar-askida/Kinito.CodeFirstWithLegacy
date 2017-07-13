@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Shipper /* Column Count = 3 */
     {
+        // Number of columns for table Shipper = 3
+        public static int ColumnCount = 3;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(@"ShipperID", Order = 1, TypeName = "int")]
         [Index(@"PK_Shippers", 1, IsUnique = true, IsClustered = true)]

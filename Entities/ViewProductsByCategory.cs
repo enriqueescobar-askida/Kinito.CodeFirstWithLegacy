@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewProductsByCategory /* Column Count = 5 */
     {
+        // Number of columns for table ViewProducts by Category = 5
+        public static int ColumnCount = 5;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CategoryName", Order = 1, TypeName = "nvarchar")]
         [Required]

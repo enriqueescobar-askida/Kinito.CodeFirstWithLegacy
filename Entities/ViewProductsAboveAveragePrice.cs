@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewProductsAboveAveragePrice /* Column Count = 2 */
     {
+        // Number of columns for table ViewProducts Above Average Price = 2
+        public static int ColumnCount = 2;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"ProductName", Order = 1, TypeName = "nvarchar")]
         [Required]

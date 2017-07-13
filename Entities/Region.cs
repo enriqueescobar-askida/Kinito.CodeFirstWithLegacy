@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Region /* Column Count = 2 */
     {
+        // Number of columns for table Region = 2
+        public static int ColumnCount = 2;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"RegionID", Order = 1, TypeName = "int")]
         [Index(@"PK_Region", 1, IsUnique = true, IsClustered = false)]

@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class Customer /* Column Count = 11 */
     {
+        // Number of columns for table Customer = 11
+        public static int ColumnCount = 11;
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column(@"CustomerID", Order = 1, TypeName = "nchar")]
         [Index(@"PK_Customers", 1, IsUnique = true, IsClustered = true)]

@@ -21,6 +21,9 @@ namespace Entities
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.32.0.0")]
     public class ViewSummaryOfSalesByYear /* Column Count = 3 */
     {
+        // Number of columns for table ViewSummary of Sales by Year = 3
+        public static int ColumnCount = 3;
+
         [Column(@"ShippedDate", Order = 1, TypeName = "datetime")]
         [Display(Name = "Shipped date")]
         public System.DateTime? ShippedDate { get; set; } // ShippedDate
