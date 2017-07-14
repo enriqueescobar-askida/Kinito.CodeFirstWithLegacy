@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{596043C1-F46
 		1.3_GeographyTypes.sql = 1.3_GeographyTypes.sql
 		2.0_Create-efdemofilter-Database.sql = 2.0_Create-efdemofilter-Database.sql
 		2.1_CreateTables.sql = 2.1_CreateTables.sql
+		4.0_Create-efdemocallback-Database.sql = 4.0_Create-efdemocallback-Database.sql
+		4.1_Pluralisation.sql = 4.1_Pluralisation.sql
+		4.2_SpanishPluralisation.sql = 4.2_SpanishPluralisation.sql
+		5.0_Patch0001.sql = 5.0_Patch0001.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{6FFF6DFE-2AD2-43AC-9F33-C5EC9CC48949}"

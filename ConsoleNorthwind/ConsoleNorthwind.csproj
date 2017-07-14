@@ -75,7 +75,7 @@
       <Name>Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{7da3ae54-c9ae-4ef7-a5bb-dcbdede8278a}</Project>
+      <Project>{7DA3AE54-C9AE-4EF7-A5BB-DCBDEDE8278A}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
