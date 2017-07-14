@@ -1,6 +1,6 @@
 CREATE DATABASE efdemocallback ON PRIMARY 
-( NAME = N'efdemocallback',     FILENAME = N'S:\MSSQL\DATA\efdemocallback.mdf' ,    SIZE = 5MB,    FILEGROWTH = 1MB ) LOG ON 
-( NAME = N'efdemocallback_log', FILENAME = N'S:\MSSQL\DATA\efdemocallback_log.ldf', SIZE = 1024KB, FILEGROWTH = 10%);
+( NAME = N'efdemocallback',     FILENAME = N'E:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\efdemocallback.mdf' ,    SIZE = 5MB,    FILEGROWTH = 1MB ) LOG ON 
+( NAME = N'efdemocallback_log', FILENAME = N'E:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\efdemocallback_log.ldf', SIZE = 1024KB, FILEGROWTH = 10%);
 GO
 ALTER DATABASE [efdemocallback] SET COMPATIBILITY_LEVEL = 110
 ALTER DATABASE [efdemocallback] SET RECOVERY SIMPLE WITH NO_WAIT
